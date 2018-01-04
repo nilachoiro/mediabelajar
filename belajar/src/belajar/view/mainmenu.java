@@ -61,12 +61,16 @@ public class mainmenu extends javax.swing.JFrame {
 
         jButton1.setText("huruf");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 180, 180));
+=======
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 180, 180));
+>>>>>>> 2528673fde17b07e2a8e41d9e84df6c2ebe54b11
 =======
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 180, 180));
 >>>>>>> 2528673fde17b07e2a8e41d9e84df6c2ebe54b11
