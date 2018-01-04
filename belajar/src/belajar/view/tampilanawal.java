@@ -26,7 +26,7 @@ public class tampilanawal extends javax.swing.JFrame {
         initComponents();
         setUndecorated(true);
         centerFrame();
-        setresolusi(1024, 768);
+//        setresolusi(1024, 768);
     }
 
     private void centerFrame() {

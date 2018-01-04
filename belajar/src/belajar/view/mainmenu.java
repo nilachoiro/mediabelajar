@@ -60,22 +60,37 @@ public class mainmenu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("huruf");
+<<<<<<< HEAD
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 180, 180));
+=======
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 180, 180));
+>>>>>>> 2528673fde17b07e2a8e41d9e84df6c2ebe54b11
 
         jButton2.setText("bendera");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 180, 180));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 180, 180));
 
         jButton3.setText("baju adat");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 180, 180));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 180, 180));
 
         jButton4.setText("angka");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 180, 180));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 180, 180));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background mainmenu.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        huruf a = new huruf();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
