@@ -1,0 +1,4 @@
+dumping = data acak
+kasar = data game yg di import ke netbean
+bendera jpg = gambar mentah bendera extensi .jpg
+bendera gif = bendera berkibar

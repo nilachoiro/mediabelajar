@@ -6,6 +6,7 @@
 package belajar;
 
 import belajar.view.cobaslide;
+import belajar.view.tampilanawal;
 
 /**
  *
@@ -18,7 +19,9 @@ public class Belajar {
      */
     public static void main(String[] args) {
         cobaslide a = new cobaslide();
-        a.setVisible(true);
+//        a.setVisible(true);
+tampilanawal b = new tampilanawal();
+b.setVisible(true);
     }
     
 }

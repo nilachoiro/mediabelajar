@@ -10,23 +10,19 @@ import java.awt.DisplayMode;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
-import java.awt.Toolkit;
-import javax.swing.JFrame;
 
 /**
  *
  * @author acer
  */
-public class tampilanawal extends javax.swing.JFrame {
+public class mainmenu extends javax.swing.JFrame {
 
     /**
-     * Creates new form tampilanawal
+     * Creates new form mainmenu
      */
-    public tampilanawal() {
+   public mainmenu() {
         initComponents();
-        setUndecorated(true);
         centerFrame();
-        setresolusi(1024, 768);
     }
 
     private void centerFrame() {
@@ -54,38 +50,32 @@ public class tampilanawal extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().setLayout(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/playbutton.png"))); // NOI18N
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(370, 340, 370, 92);
+        jButton1.setText("huruf");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 180, 180));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background awal.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1024, 768);
+        jButton2.setText("bendera");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 180, 180));
 
-        getAccessibleContext().setAccessibleName("frame1");
+        jButton3.setText("baju adat");
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 180, 180));
 
-        setSize(new java.awt.Dimension(1040, 806));
-        setLocationRelativeTo(null);
+        jButton4.setText("angka");
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 180, 180));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background mainmenu.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible(false);
-        mainmenu a = new mainmenu();
-        a.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,26 +94,29 @@ public class tampilanawal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tampilanawal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mainmenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tampilanawal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mainmenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tampilanawal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mainmenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tampilanawal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mainmenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tampilanawal().setVisible(true);
+                new mainmenu().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
