@@ -30,7 +30,6 @@ public class huruf extends javax.swing.JFrame {
     private void initComponents() {
 
         grouphuruf = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        show = new javax.swing.JPanel();
         group1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -59,16 +58,17 @@ public class huruf extends javax.swing.JFrame {
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
+        show = new javax.swing.JPanel();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         btnok = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         grouphuruf.setOpaque(false);
-        grouphuruf.add(show, "card4");
 
         group1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -165,6 +165,7 @@ public class huruf extends javax.swing.JFrame {
         group2.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
 
         grouphuruf.add(group2, "card2");
+        grouphuruf.add(show, "card4");
 
         getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 830, 380));
 
