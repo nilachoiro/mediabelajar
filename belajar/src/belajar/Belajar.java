@@ -5,7 +5,6 @@
  */
 package belajar;
 
-import belajar.view.cobaslide;
 import belajar.view.tampilanawal;
 
 /**
@@ -18,8 +17,6 @@ public class Belajar {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        cobaslide a = new cobaslide();
-//        a.setVisible(true);
 tampilanawal b = new tampilanawal();
 b.setVisible(true);
     }

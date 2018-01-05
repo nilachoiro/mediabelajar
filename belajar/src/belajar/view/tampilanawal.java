@@ -10,8 +10,6 @@ import java.awt.DisplayMode;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
-import java.awt.Toolkit;
-import javax.swing.JFrame;
 
 /**
  *
@@ -26,7 +24,7 @@ public class tampilanawal extends javax.swing.JFrame {
         initComponents();
         setUndecorated(true);
         centerFrame();
-        setresolusi(1024, 768);
+//        setresolusi(1024, 768);
     }
 
     private void centerFrame() {
@@ -58,6 +56,7 @@ public class tampilanawal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setUndecorated(true);
         getContentPane().setLayout(null);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/playbutton.png"))); // NOI18N
@@ -77,7 +76,7 @@ public class tampilanawal extends javax.swing.JFrame {
 
         getAccessibleContext().setAccessibleName("frame1");
 
-        setSize(new java.awt.Dimension(1040, 806));
+        setSize(new java.awt.Dimension(1024, 768));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
