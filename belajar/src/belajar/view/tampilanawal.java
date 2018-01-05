@@ -10,8 +10,6 @@ import java.awt.DisplayMode;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
-import java.awt.Toolkit;
-import javax.swing.JFrame;
 
 /**
  *
@@ -26,7 +24,7 @@ public class tampilanawal extends javax.swing.JFrame {
         initComponents();
         setUndecorated(true);
         centerFrame();
-        setresolusi(1024, 768);
+//        setresolusi(1024, 768);
     }
 
     private void centerFrame() {

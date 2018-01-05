@@ -73,7 +73,7 @@ public class huruf extends javax.swing.JFrame {
         group1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("a");
-        group1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+        group1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 100, 80));
 
         jButton2.setText("b");
         group1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
