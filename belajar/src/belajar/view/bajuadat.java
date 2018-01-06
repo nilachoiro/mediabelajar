@@ -71,6 +71,7 @@ public class bajuadat extends javax.swing.JFrame {
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         btnok = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,7 +83,7 @@ public class bajuadat extends javax.swing.JFrame {
         group1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         b1.setText("1");
-        group1.add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 100, 80));
+        group1.add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 120, 160));
 
         b2.setText("2");
         group1.add(b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, -1));
@@ -237,6 +238,17 @@ public class bajuadat extends javax.swing.JFrame {
         btnok.setText("ok");
         getContentPane().add(btnok, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, -1));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome2.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background huruf.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
@@ -276,6 +288,12 @@ public class bajuadat extends javax.swing.JFrame {
     private void b31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_b31ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        mainmenu a = new mainmenu();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -354,6 +372,7 @@ public class bajuadat extends javax.swing.JFrame {
     private javax.swing.JPanel group2;
     private javax.swing.JPanel group3;
     private diu.swe.habib.JPanelSlider.JPanelSlider grouphuruf;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel show;
     // End of variables declaration//GEN-END:variables

@@ -1,0 +1,62 @@
+alferia = aljazair
+tansania = tanzania
+leshoto = lesoto
+cameroon = kamerun
+democratic republic of the kongo = republik demokratik kongo
+benin = banin
+gwenia bissau = guenia bissau
+seychelles = seycheles
+luxemburg = luksemburg
+prancis = perancis
+bosnia and herzegovina = bosnia
+belarus = belarusia
+estonian = estonia
+latvija = latvia
+moldova = maldova
+romania = rumania
+swdia = swedia
+butan = bhutan
+maldives = maladewa
+kazakztan = kazakhstan
+kyrgyzstan = kirgizstan
+china = cina
+afganistan = afghanistan
+saudi arabia = arab saudi
+libanon = lebanon
+cyprus = siprus
+western sahara = yordania
+kepulauan solomon = solomon
+samoa = independen samoa
+new zealand = selandia baru
+vunuatu = vanuatu
+amerika = amerika serikat
+canada = kanada
+mexico = meksiko
+dominica = dominika
+elsavador =el savador
+jamaica = jamaika
+bahamas = kepulauan bahamas
+costa rica = kosta rika
+cuba = kuba
+nicaragua = nikaragua
+chile = chili
+ecuador = ekuador
+colombia = kolombia
+venezwela = venezuela
+burkinafaso = faso
+ivory coast = pantai gading
+cabo verde = tanjung verde
+komorus = komoro
+republic of the congo = kongo
+eslovenia = eslovenia
+moroko = maroko
+
+afrikautara
+sharawi arab 
+
+asia barat
+palestina
+
+amerika tengah
+puarto riko
+republik dominika

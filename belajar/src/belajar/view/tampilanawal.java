@@ -10,6 +10,11 @@ import java.awt.DisplayMode;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,13 +25,25 @@ public class tampilanawal extends javax.swing.JFrame {
     /**
      * Creates new form tampilanawal
      */
+    AudioInputStream audioIn;
+    Clip clip;
     public tampilanawal() {
         initComponents();
         setUndecorated(true);
         centerFrame();
-//        setresolusi(1024, 768);
+        setresolusi(1024, 768);
+        Musik_Play();
     }
-
+  public void Musik_Play() {
+        try {
+            audioIn = AudioSystem.getAudioInputStream(new File("gameplay.wav"));
+            clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+        }
+    }
     private void centerFrame() {
         Dimension windowSize = getSize();
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
