@@ -38,10 +38,7 @@ public class tampilanawal extends javax.swing.JFrame {
   public void Musik_Play() {
         try {
             audioIn = AudioSystem.getAudioInputStream(new File("gameplay.wav"));
-            
             clip = AudioSystem.getClip();
-//            FloatControl control = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-//            control.setValue((float ) 0.6);
             clip.open(audioIn);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
         } catch (Exception e) {
