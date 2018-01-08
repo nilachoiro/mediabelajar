@@ -5,6 +5,12 @@
  */
 package belajar.view;
 
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author acer
@@ -14,6 +20,9 @@ public class huruf extends javax.swing.JFrame {
     /**
      * Creates new form huruf
      */
+    AudioInputStream audioIn;
+    Clip clip;
+
     public huruf() {
         initComponents();
         btnbefore.setVisible(false);
@@ -78,16 +87,31 @@ public class huruf extends javax.swing.JFrame {
         a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/a.png"))); // NOI18N
         a.setBorderPainted(false);
         a.setContentAreaFilled(false);
+        a.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aActionPerformed(evt);
+            }
+        });
         group1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 80, 100));
 
         b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/b.png"))); // NOI18N
         b.setBorderPainted(false);
         b.setContentAreaFilled(false);
+        b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bActionPerformed(evt);
+            }
+        });
         group1.add(b, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 80, 110));
 
         c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/c.png"))); // NOI18N
         c.setBorderPainted(false);
         c.setContentAreaFilled(false);
+        c.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cActionPerformed(evt);
+            }
+        });
         group1.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 80, -1));
 
         d.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/d.png"))); // NOI18N
@@ -286,17 +310,17 @@ public class huruf extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
-       grouphuruf.nextPanel(50, group1, grouphuruf.right);
+        grouphuruf.nextPanel(50, group1, grouphuruf.right);
         btnnext.setVisible(true);
         btnbefore.setVisible(false);
-        
+
     }//GEN-LAST:event_btnbeforeActionPerformed
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
         grouphuruf.nextPanel(50, group2, grouphuruf.left);
         btnbefore.setVisible(true);
         btnnext.setVisible(false);
-        
+
     }//GEN-LAST:event_btnnextActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -308,6 +332,31 @@ public class huruf extends javax.swing.JFrame {
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
+        char huruf = 'a';
+        play_sound_huruf(huruf);
+    }//GEN-LAST:event_aActionPerformed
+
+    private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
+        char huruf = 'b';
+        play_sound_huruf(huruf);
+    }//GEN-LAST:event_bActionPerformed
+
+    private void cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cActionPerformed
+        char huruf = 'c';
+        play_sound_huruf(huruf);
+    }//GEN-LAST:event_cActionPerformed
+    public void play_sound_huruf(char huruf) {
+        try {
+            audioIn = AudioSystem.getAudioInputStream(new File("src\\suara_huruf\\" + huruf + ".wav"));
+            clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.loop(0);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+        }
+    }
 
     /**
      * @param args the command line arguments

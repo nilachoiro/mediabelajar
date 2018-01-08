@@ -14,6 +14,7 @@ import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,13 +32,16 @@ public class tampilanawal extends javax.swing.JFrame {
         initComponents();
         setUndecorated(true);
         centerFrame();
-        setresolusi(1024, 768);
+//        setresolusi(1024, 768);
         Musik_Play();
     }
   public void Musik_Play() {
         try {
             audioIn = AudioSystem.getAudioInputStream(new File("gameplay.wav"));
+            
             clip = AudioSystem.getClip();
+//            FloatControl control = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+//            control.setValue((float ) 0.6);
             clip.open(audioIn);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
         } catch (Exception e) {

@@ -51,12 +51,4 @@ republic of the congo = kongo
 eslovenia = eslovenia
 moroko = maroko
 
-afrikautara
-sharawi arab 
 
-asia barat
-palestina
-
-amerika tengah
-puarto riko
-republik dominika
