@@ -16,8 +16,6 @@ public class angka extends javax.swing.JFrame {
      */
     public angka() {
         initComponents();
-        btnbefore.setVisible(false);
-        btnok.setVisible(false);
         this.setLocationRelativeTo(this);
     }
 
@@ -31,6 +29,7 @@ public class angka extends javax.swing.JFrame {
     private void initComponents() {
 
         grouphuruf = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        show = new javax.swing.JPanel();
         group1 = new javax.swing.JPanel();
         c1 = new javax.swing.JButton();
         c2 = new javax.swing.JButton();
@@ -42,10 +41,7 @@ public class angka extends javax.swing.JFrame {
         c8 = new javax.swing.JButton();
         c9 = new javax.swing.JButton();
         c0 = new javax.swing.JButton();
-        show = new javax.swing.JPanel();
-        btnbefore = new javax.swing.JButton();
-        btnnext = new javax.swing.JButton();
-        btnok = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,74 +51,87 @@ public class angka extends javax.swing.JFrame {
         grouphuruf.setBorder(null);
         grouphuruf.setOpaque(false);
 
+        show.setOpaque(false);
+
         group1.setOpaque(false);
         group1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        c1.setText("1");
-        group1.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 100, 130));
+        c1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c1.png"))); // NOI18N
+        c1.setBorderPainted(false);
+        c1.setContentAreaFilled(false);
+        group1.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 110, 210));
 
-        c2.setText("2");
-        group1.add(c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 100, 130));
+        c2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c2.png"))); // NOI18N
+        c2.setBorderPainted(false);
+        c2.setContentAreaFilled(false);
+        group1.add(c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 150, 160));
 
-        c3.setText("3");
-        group1.add(c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 100, 130));
+        c3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c3.png"))); // NOI18N
+        c3.setBorderPainted(false);
+        c3.setContentAreaFilled(false);
+        group1.add(c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 160, 200));
 
-        c4.setText("4");
-        group1.add(c4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 40, 100, 130));
+        c4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c4.png"))); // NOI18N
+        c4.setBorderPainted(false);
+        c4.setContentAreaFilled(false);
+        group1.add(c4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 150, 200));
 
-        c5.setText("5");
-        group1.add(c5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 100, 130));
+        c5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c5.png"))); // NOI18N
+        c5.setBorderPainted(false);
+        c5.setContentAreaFilled(false);
+        group1.add(c5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 140, 200));
 
-        c6.setText("6");
-        group1.add(c6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 100, 130));
+        c6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c6.png"))); // NOI18N
+        c6.setBorderPainted(false);
+        c6.setContentAreaFilled(false);
+        group1.add(c6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 150, 180));
 
-        c7.setText("7");
-        group1.add(c7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 100, 130));
+        c7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c7.png"))); // NOI18N
+        c7.setBorderPainted(false);
+        c7.setContentAreaFilled(false);
+        group1.add(c7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 150, 210));
 
-        c8.setText("8");
+        c8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c8.png"))); // NOI18N
+        c8.setBorderPainted(false);
+        c8.setContentAreaFilled(false);
         c8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c8ActionPerformed(evt);
             }
         });
-        group1.add(c8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 100, 130));
+        group1.add(c8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, 130, 210));
 
-        c9.setText("9");
-        group1.add(c9, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 100, 130));
+        c9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c9.png"))); // NOI18N
+        c9.setBorderPainted(false);
+        c9.setContentAreaFilled(false);
+        group1.add(c9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 300, 120, 190));
 
-        c0.setText("0");
+        c0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c0.png"))); // NOI18N
+        c0.setBorderPainted(false);
+        c0.setContentAreaFilled(false);
         c0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c0ActionPerformed(evt);
             }
         });
-        group1.add(c0, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 100, 130));
+        group1.add(c0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 200));
 
-        grouphuruf.add(group1, "card2");
+        show.add(group1);
 
-        show.setOpaque(false);
         grouphuruf.add(show, "card4");
 
-        getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 830, 380));
+        getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 870, 510));
 
-        btnbefore.setText("before");
-        btnbefore.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome2.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbeforeActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
-
-        btnnext.setText("next");
-        btnnext.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnnextActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 590, -1, -1));
-
-        btnok.setText("ok");
-        getContentPane().add(btnok, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background huruf.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
@@ -130,24 +139,19 @@ public class angka extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
-       grouphuruf.nextPanel(50, group1, grouphuruf.right);
-        btnnext.setVisible(true);
-        btnbefore.setVisible(false);
-        
-    }//GEN-LAST:event_btnbeforeActionPerformed
-
-    private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
-
-    }//GEN-LAST:event_btnnextActionPerformed
-
     private void c8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_c8ActionPerformed
 
     private void c0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c0ActionPerformed
-        grouphuruf.nextPanel(50, show, grouphuruf.);
+        grouphuruf.nextPanel(50, show, grouphuruf.left);
     }//GEN-LAST:event_c0ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        mainmenu a = new mainmenu();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,9 +190,6 @@ public class angka extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnbefore;
-    private javax.swing.JButton btnnext;
-    private javax.swing.JButton btnok;
     private javax.swing.JButton c0;
     private javax.swing.JButton c1;
     private javax.swing.JButton c2;
@@ -201,6 +202,7 @@ public class angka extends javax.swing.JFrame {
     private javax.swing.JButton c9;
     private javax.swing.JPanel group1;
     private diu.swe.habib.JPanelSlider.JPanelSlider grouphuruf;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel show;
     // End of variables declaration//GEN-END:variables
