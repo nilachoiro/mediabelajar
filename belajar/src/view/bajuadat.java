@@ -14,10 +14,11 @@ public class bajuadat extends javax.swing.JFrame {
     /**
      * Creates new form huruf
      */
+    int set=0;
     public bajuadat() {
         initComponents();
+        
         btnbefore.setVisible(false);
-        btnok.setVisible(false);
         this.setLocationRelativeTo(this);
     }
 
@@ -30,215 +31,508 @@ public class bajuadat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        grouphuruf = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        group1 = new javax.swing.JPanel();
-        b1 = new javax.swing.JButton();
-        b2 = new javax.swing.JButton();
-        b3 = new javax.swing.JButton();
-        b4 = new javax.swing.JButton();
-        b5 = new javax.swing.JButton();
-        b6 = new javax.swing.JButton();
-        b7 = new javax.swing.JButton();
-        b8 = new javax.swing.JButton();
-        b9 = new javax.swing.JButton();
-        b10 = new javax.swing.JButton();
-        b11 = new javax.swing.JButton();
-        group2 = new javax.swing.JPanel();
-        b12 = new javax.swing.JButton();
-        b13 = new javax.swing.JButton();
-        b14 = new javax.swing.JButton();
-        b15 = new javax.swing.JButton();
-        b18 = new javax.swing.JButton();
-        b16 = new javax.swing.JButton();
-        b17 = new javax.swing.JButton();
-        b19 = new javax.swing.JButton();
-        b20 = new javax.swing.JButton();
-        b21 = new javax.swing.JButton();
-        b22 = new javax.swing.JButton();
-        group3 = new javax.swing.JPanel();
-        b23 = new javax.swing.JButton();
-        b24 = new javax.swing.JButton();
-        b25 = new javax.swing.JButton();
-        b26 = new javax.swing.JButton();
-        b27 = new javax.swing.JButton();
-        b28 = new javax.swing.JButton();
-        b29 = new javax.swing.JButton();
-        b30 = new javax.swing.JButton();
-        b31 = new javax.swing.JButton();
-        b32 = new javax.swing.JButton();
-        b33 = new javax.swing.JButton();
-        show = new javax.swing.JPanel();
+        group = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        jPanelSlider1 = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        a1 = new javax.swing.JPanel();
+        baju = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        a2 = new javax.swing.JPanel();
+        baju1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        a3 = new javax.swing.JPanel();
+        baju2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        a4 = new javax.swing.JPanel();
+        baju3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        a5 = new javax.swing.JPanel();
+        baju4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        a6 = new javax.swing.JPanel();
+        baju5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        a7 = new javax.swing.JPanel();
+        baju6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        a8 = new javax.swing.JPanel();
+        baju7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        a9 = new javax.swing.JPanel();
+        baju8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        a10 = new javax.swing.JPanel();
+        baju9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        a11 = new javax.swing.JPanel();
+        baju10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        a12 = new javax.swing.JPanel();
+        baju11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        a13 = new javax.swing.JPanel();
+        baju12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        a14 = new javax.swing.JPanel();
+        baju13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        a15 = new javax.swing.JPanel();
+        baju14 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        a16 = new javax.swing.JPanel();
+        baju15 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        a17 = new javax.swing.JPanel();
+        baju16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        a18 = new javax.swing.JPanel();
+        baju17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        a19 = new javax.swing.JPanel();
+        baju18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        a20 = new javax.swing.JPanel();
+        baju19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        a21 = new javax.swing.JPanel();
+        baju20 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        a22 = new javax.swing.JPanel();
+        baju21 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        a23 = new javax.swing.JPanel();
+        baju22 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        a24 = new javax.swing.JPanel();
+        baju23 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        a25 = new javax.swing.JPanel();
+        baju24 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        a26 = new javax.swing.JPanel();
+        baju25 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        a27 = new javax.swing.JPanel();
+        baju26 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        a28 = new javax.swing.JPanel();
+        baju27 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        a29 = new javax.swing.JPanel();
+        baju28 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        a30 = new javax.swing.JPanel();
+        baju29 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        a31 = new javax.swing.JPanel();
+        baju30 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        a32 = new javax.swing.JPanel();
+        baju31 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        a33 = new javax.swing.JPanel();
+        baju32 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
-        btnok = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+
+        group.setBorder(null);
+        group.setOpaque(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        grouphuruf.setOpaque(false);
+        jPanelSlider1.setBorder(null);
+        jPanelSlider1.setOpaque(false);
 
-        group1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        a1.setOpaque(false);
+        a1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b1.setText("1");
-        group1.add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 120, 160));
+        baju.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a1.add(baju, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b2.setText("2");
-        group1.add(b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b3.setText("3");
-        group1.add(b3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, -1, -1));
+        jPanelSlider1.add(a1, "card2");
 
-        b4.setText("4");
-        group1.add(b4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 40, -1, -1));
+        a2.setOpaque(false);
+        a2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b5.setText("5");
-        group1.add(b5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
+        baju1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b2.png"))); // NOI18N
+        a2.add(baju1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b6.setText("6");
-        group1.add(b6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t2.png"))); // NOI18N
+        a2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b7.setText("7");
-        group1.add(b7, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, -1, -1));
+        jPanelSlider1.add(a2, "card2");
 
-        b8.setText("8");
-        group1.add(b8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, -1, -1));
+        a3.setOpaque(false);
+        a3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b9.setText("9");
-        group1.add(b9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, -1, -1));
+        baju2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a3.add(baju2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b10.setText("10");
-        b10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b10ActionPerformed(evt);
-            }
-        });
-        group1.add(b10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b11.setText("11");
-        group1.add(b11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, -1, -1));
+        jPanelSlider1.add(a3, "card2");
 
-        grouphuruf.add(group1, "card2");
+        a4.setOpaque(false);
+        a4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        group2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        baju3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a4.add(baju3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b12.setText("12");
-        group2.add(b12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 100, 80));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b13.setText("13");
-        group2.add(b13, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
+        jPanelSlider1.add(a4, "card2");
 
-        b14.setText("14");
-        group2.add(b14, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
+        a5.setOpaque(false);
+        a5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b15.setText("15");
-        group2.add(b15, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 80, -1, -1));
+        baju4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a5.add(baju4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b18.setText("18");
-        group2.add(b18, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, -1, -1));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b16.setText("16");
-        group2.add(b16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
+        jPanelSlider1.add(a5, "card2");
 
-        b17.setText("17");
-        group2.add(b17, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
+        a6.setOpaque(false);
+        a6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b19.setText("19");
-        group2.add(b19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
+        baju5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a6.add(baju5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b20.setText("20");
-        group2.add(b20, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, -1, -1));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b21.setText("21");
-        b21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b21ActionPerformed(evt);
-            }
-        });
-        group2.add(b21, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, -1, -1));
+        jPanelSlider1.add(a6, "card2");
 
-        b22.setText("22");
-        b22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b22ActionPerformed(evt);
-            }
-        });
-        group2.add(b22, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, -1, -1));
+        a7.setOpaque(false);
+        a7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        grouphuruf.add(group2, "card2");
+        baju6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a7.add(baju6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        group3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a7.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b23.setText("23");
-        group3.add(b23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 100, 80));
+        jPanelSlider1.add(a7, "card2");
 
-        b24.setText("24");
-        group3.add(b24, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+        a8.setOpaque(false);
+        a8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b25.setText("25");
-        group3.add(b25, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
+        baju7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a8.add(baju7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b26.setText("26");
-        group3.add(b26, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, -1, -1));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b27.setText("27");
-        group3.add(b27, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+        jPanelSlider1.add(a8, "card2");
 
-        b28.setText("28");
-        group3.add(b28, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+        a9.setOpaque(false);
+        a9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b29.setText("29");
-        group3.add(b29, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, -1, -1));
+        baju8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a9.add(baju8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        b30.setText("30");
-        group3.add(b30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a9.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        b31.setText("31");
-        b31.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b31ActionPerformed(evt);
-            }
-        });
-        group3.add(b31, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, -1, -1));
+        jPanelSlider1.add(a9, "card2");
 
-        b32.setText("32");
-        b32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b32ActionPerformed(evt);
-            }
-        });
-        group3.add(b32, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
+        a10.setOpaque(false);
+        a10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        b33.setText("33");
-        group3.add(b33, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, -1, -1));
+        baju9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a10.add(baju9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        grouphuruf.add(group3, "card2");
-        grouphuruf.add(show, "card4");
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a10.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 830, 380));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 537, 57));
+        jPanelSlider1.add(a10, "card2");
 
-        btnbefore.setText("before");
+        a11.setOpaque(false);
+        a11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a11.add(baju10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a11, "card2");
+
+        a12.setOpaque(false);
+        a12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a12.add(baju11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a12.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a12, "card2");
+
+        a13.setOpaque(false);
+        a13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a13.add(baju12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a13.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a13, "card2");
+
+        a14.setOpaque(false);
+        a14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a14.add(baju13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a14.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a14, "card2");
+
+        a15.setOpaque(false);
+        a15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a15.add(baju14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a15.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a15, "card2");
+
+        a16.setOpaque(false);
+        a16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a16.add(baju15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a16.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a16, "card2");
+
+        a17.setOpaque(false);
+        a17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a17.add(baju16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a17.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a17, "card2");
+
+        a18.setOpaque(false);
+        a18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a18.add(baju17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a18.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a18, "card2");
+
+        a19.setOpaque(false);
+        a19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a19.add(baju18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a19.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a19, "card2");
+
+        a20.setOpaque(false);
+        a20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a20.add(baju19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a20.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a20, "card2");
+
+        a21.setOpaque(false);
+        a21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a21.add(baju20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a21.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a21, "card2");
+
+        a22.setOpaque(false);
+        a22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a22.add(baju21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a22.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a22, "card2");
+
+        a23.setOpaque(false);
+        a23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a23.add(baju22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a23.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a23, "card2");
+
+        a24.setOpaque(false);
+        a24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a24.add(baju23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a24.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a24, "card2");
+
+        a25.setOpaque(false);
+        a25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a25.add(baju24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a25.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a25, "card2");
+
+        a26.setOpaque(false);
+        a26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a26.add(baju25, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a26.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a26, "card2");
+
+        a27.setOpaque(false);
+        a27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a27.add(baju26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a27.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a27, "card2");
+
+        a28.setOpaque(false);
+        a28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a28.add(baju27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a28.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a28, "card2");
+
+        a29.setOpaque(false);
+        a29.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a29.add(baju28, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a29.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a29, "card2");
+
+        a30.setOpaque(false);
+        a30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a30.add(baju29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a30.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a30, "card2");
+
+        a31.setOpaque(false);
+        a31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a31.add(baju30, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a31.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a31, "card2");
+
+        a32.setOpaque(false);
+        a32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a32.add(baju31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a32.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a32, "card2");
+
+        a33.setOpaque(false);
+        a33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        baju32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        a33.add(baju32, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
+
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        a33.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
+
+        jPanelSlider1.add(a33, "card2");
+
+        getContentPane().add(jPanelSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 550, 580));
+
+        btnbefore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
+        btnbefore.setBorderPainted(false);
+        btnbefore.setContentAreaFilled(false);
+        btnbefore.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
         btnbefore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbeforeActionPerformed(evt);
             }
         });
-        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
+        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, -1, -1));
 
-        btnnext.setText("next");
+        btnnext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
+        btnnext.setBorderPainted(false);
+        btnnext.setContentAreaFilled(false);
+        btnnext.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext2.png"))); // NOI18N
         btnnext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnnextActionPerformed(evt);
             }
         });
-        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 590, -1, -1));
-
-        btnok.setText("ok");
-        getContentPane().add(btnok, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, -1));
+        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 360, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -258,45 +552,26 @@ public class bajuadat extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
-       grouphuruf.nextPanel(50, group1, grouphuruf.right);
-        btnnext.setVisible(true);
-        btnbefore.setVisible(false);
-        
+              
     }//GEN-LAST:event_btnbeforeActionPerformed
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
-        grouphuruf.nextPanel(50, group2, grouphuruf.left);
+        group.nextPanel(50, group, group.left);
         btnbefore.setVisible(true);
         btnnext.setVisible(false);
         
     }//GEN-LAST:event_btnnextActionPerformed
-
-    private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b10ActionPerformed
-
-    private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b21ActionPerformed
-
-    private void b32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b32ActionPerformed
-
-    private void b22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b22ActionPerformed
-
-    private void b31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b31ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         mainmenu a = new mainmenu();
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
+public void kurang(){
+switch (set){
+    case 0 : group.nextPanel(50, group, group.right); break;
+}
+}
     /**
      * @param args the command line arguments
      */
@@ -334,49 +609,110 @@ public class bajuadat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton b1;
-    private javax.swing.JButton b10;
-    private javax.swing.JButton b11;
-    private javax.swing.JButton b12;
-    private javax.swing.JButton b13;
-    private javax.swing.JButton b14;
-    private javax.swing.JButton b15;
-    private javax.swing.JButton b16;
-    private javax.swing.JButton b17;
-    private javax.swing.JButton b18;
-    private javax.swing.JButton b19;
-    private javax.swing.JButton b2;
-    private javax.swing.JButton b20;
-    private javax.swing.JButton b21;
-    private javax.swing.JButton b22;
-    private javax.swing.JButton b23;
-    private javax.swing.JButton b24;
-    private javax.swing.JButton b25;
-    private javax.swing.JButton b26;
-    private javax.swing.JButton b27;
-    private javax.swing.JButton b28;
-    private javax.swing.JButton b29;
-    private javax.swing.JButton b3;
-    private javax.swing.JButton b30;
-    private javax.swing.JButton b31;
-    private javax.swing.JButton b32;
-    private javax.swing.JButton b33;
-    private javax.swing.JButton b4;
-    private javax.swing.JButton b5;
-    private javax.swing.JButton b6;
-    private javax.swing.JButton b7;
-    private javax.swing.JButton b8;
-    private javax.swing.JButton b9;
+    private javax.swing.JPanel a1;
+    private javax.swing.JPanel a10;
+    private javax.swing.JPanel a11;
+    private javax.swing.JPanel a12;
+    private javax.swing.JPanel a13;
+    private javax.swing.JPanel a14;
+    private javax.swing.JPanel a15;
+    private javax.swing.JPanel a16;
+    private javax.swing.JPanel a17;
+    private javax.swing.JPanel a18;
+    private javax.swing.JPanel a19;
+    private javax.swing.JPanel a2;
+    private javax.swing.JPanel a20;
+    private javax.swing.JPanel a21;
+    private javax.swing.JPanel a22;
+    private javax.swing.JPanel a23;
+    private javax.swing.JPanel a24;
+    private javax.swing.JPanel a25;
+    private javax.swing.JPanel a26;
+    private javax.swing.JPanel a27;
+    private javax.swing.JPanel a28;
+    private javax.swing.JPanel a29;
+    private javax.swing.JPanel a3;
+    private javax.swing.JPanel a30;
+    private javax.swing.JPanel a31;
+    private javax.swing.JPanel a32;
+    private javax.swing.JPanel a33;
+    private javax.swing.JPanel a4;
+    private javax.swing.JPanel a5;
+    private javax.swing.JPanel a6;
+    private javax.swing.JPanel a7;
+    private javax.swing.JPanel a8;
+    private javax.swing.JPanel a9;
+    private javax.swing.JLabel baju;
+    private javax.swing.JLabel baju1;
+    private javax.swing.JLabel baju10;
+    private javax.swing.JLabel baju11;
+    private javax.swing.JLabel baju12;
+    private javax.swing.JLabel baju13;
+    private javax.swing.JLabel baju14;
+    private javax.swing.JLabel baju15;
+    private javax.swing.JLabel baju16;
+    private javax.swing.JLabel baju17;
+    private javax.swing.JLabel baju18;
+    private javax.swing.JLabel baju19;
+    private javax.swing.JLabel baju2;
+    private javax.swing.JLabel baju20;
+    private javax.swing.JLabel baju21;
+    private javax.swing.JLabel baju22;
+    private javax.swing.JLabel baju23;
+    private javax.swing.JLabel baju24;
+    private javax.swing.JLabel baju25;
+    private javax.swing.JLabel baju26;
+    private javax.swing.JLabel baju27;
+    private javax.swing.JLabel baju28;
+    private javax.swing.JLabel baju29;
+    private javax.swing.JLabel baju3;
+    private javax.swing.JLabel baju30;
+    private javax.swing.JLabel baju31;
+    private javax.swing.JLabel baju32;
+    private javax.swing.JLabel baju4;
+    private javax.swing.JLabel baju5;
+    private javax.swing.JLabel baju6;
+    private javax.swing.JLabel baju7;
+    private javax.swing.JLabel baju8;
+    private javax.swing.JLabel baju9;
     private javax.swing.JButton btnbefore;
     private javax.swing.JButton btnnext;
-    private javax.swing.JButton btnok;
-    private javax.swing.JPanel group1;
-    private javax.swing.JPanel group2;
-    private javax.swing.JPanel group3;
-    private diu.swe.habib.JPanelSlider.JPanelSlider grouphuruf;
+    private diu.swe.habib.JPanelSlider.JPanelSlider group;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel show;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider1;
     // End of variables declaration//GEN-END:variables
 }
