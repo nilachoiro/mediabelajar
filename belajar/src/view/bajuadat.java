@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package belajar.view;
+package view;
 
 /**
  *
@@ -68,6 +68,7 @@ public class bajuadat extends javax.swing.JFrame {
         b32 = new javax.swing.JButton();
         b33 = new javax.swing.JButton();
         show = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         btnok = new javax.swing.JButton();
@@ -218,6 +219,7 @@ public class bajuadat extends javax.swing.JFrame {
         grouphuruf.add(show, "card4");
 
         getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 830, 380));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 537, 57));
 
         btnbefore.setText("before");
         btnbefore.addActionListener(new java.awt.event.ActionListener() {
@@ -249,7 +251,7 @@ public class bajuadat extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background huruf.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroung baju.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
@@ -374,6 +376,7 @@ public class bajuadat extends javax.swing.JFrame {
     private diu.swe.habib.JPanelSlider.JPanelSlider grouphuruf;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel show;
     // End of variables declaration//GEN-END:variables
 }

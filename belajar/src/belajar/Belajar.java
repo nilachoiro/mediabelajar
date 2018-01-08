@@ -5,7 +5,7 @@
  */
 package belajar;
 
-import belajar.view.tampilanawal;
+import view.tampilanawal;
 import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
