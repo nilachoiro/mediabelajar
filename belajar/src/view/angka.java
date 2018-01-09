@@ -5,6 +5,12 @@
  */
 package view;
 
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author acer
@@ -14,6 +20,8 @@ public class angka extends javax.swing.JFrame {
     /**
      * Creates new form huruf
      */
+    AudioInputStream audioIn;
+    Clip clip;
     public angka() {
         initComponents();
         this.setLocationRelativeTo(this);
@@ -59,36 +67,71 @@ public class angka extends javax.swing.JFrame {
         c1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c1.png"))); // NOI18N
         c1.setBorderPainted(false);
         c1.setContentAreaFilled(false);
+        c1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c1ActionPerformed(evt);
+            }
+        });
         group1.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 110, 210));
 
         c2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c2.png"))); // NOI18N
         c2.setBorderPainted(false);
         c2.setContentAreaFilled(false);
+        c2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c2ActionPerformed(evt);
+            }
+        });
         group1.add(c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 150, 160));
 
         c3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c3.png"))); // NOI18N
         c3.setBorderPainted(false);
         c3.setContentAreaFilled(false);
+        c3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c3ActionPerformed(evt);
+            }
+        });
         group1.add(c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 160, 200));
 
         c4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c4.png"))); // NOI18N
         c4.setBorderPainted(false);
         c4.setContentAreaFilled(false);
+        c4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c4ActionPerformed(evt);
+            }
+        });
         group1.add(c4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 150, 200));
 
         c5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c5.png"))); // NOI18N
         c5.setBorderPainted(false);
         c5.setContentAreaFilled(false);
+        c5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c5ActionPerformed(evt);
+            }
+        });
         group1.add(c5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 140, 200));
 
         c6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c6.png"))); // NOI18N
         c6.setBorderPainted(false);
         c6.setContentAreaFilled(false);
+        c6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c6ActionPerformed(evt);
+            }
+        });
         group1.add(c6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 150, 180));
 
         c7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c7.png"))); // NOI18N
         c7.setBorderPainted(false);
         c7.setContentAreaFilled(false);
+        c7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c7ActionPerformed(evt);
+            }
+        });
         group1.add(c7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 150, 210));
 
         c8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c8.png"))); // NOI18N
@@ -104,6 +147,11 @@ public class angka extends javax.swing.JFrame {
         c9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c9.png"))); // NOI18N
         c9.setBorderPainted(false);
         c9.setContentAreaFilled(false);
+        c9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c9ActionPerformed(evt);
+            }
+        });
         group1.add(c9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 300, 120, 190));
 
         c0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c0.png"))); // NOI18N
@@ -133,18 +181,15 @@ public class angka extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background huruf.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background huruf.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void c8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c8ActionPerformed
-
     private void c0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c0ActionPerformed
-        grouphuruf.nextPanel(50, show, grouphuruf.left);
+        char huruf = '0';
+        play_sound_angka(huruf);
     }//GEN-LAST:event_c0ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -152,6 +197,61 @@ public class angka extends javax.swing.JFrame {
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c1ActionPerformed
+        char huruf = '1';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c1ActionPerformed
+
+    private void c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c2ActionPerformed
+        char huruf = '2';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c2ActionPerformed
+
+    private void c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c3ActionPerformed
+        char huruf = '3';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c3ActionPerformed
+
+    private void c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c4ActionPerformed
+        char huruf = '4';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c4ActionPerformed
+
+    private void c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c5ActionPerformed
+        char huruf = '5';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c5ActionPerformed
+
+    private void c6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c6ActionPerformed
+        char huruf = '6';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c6ActionPerformed
+
+    private void c7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c7ActionPerformed
+        char huruf = '7';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c7ActionPerformed
+
+    private void c8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c8ActionPerformed
+        char huruf = '8';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c8ActionPerformed
+
+    private void c9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c9ActionPerformed
+        char huruf = '9';
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c9ActionPerformed
+ public void play_sound_angka(char angka) {
+        try {
+            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_angka\\" + angka + ".wav"));
+            clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.loop(0);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+        }
+    }
 
     /**
      * @param args the command line arguments
