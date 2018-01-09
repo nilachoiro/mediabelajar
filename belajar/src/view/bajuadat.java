@@ -5,6 +5,12 @@
  */
 package view;
 
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author acer
@@ -14,11 +20,11 @@ public class bajuadat extends javax.swing.JFrame {
     /**
      * Creates new form huruf
      */
-    int set=0;
+    int set=1;
+    AudioInputStream audioIn;
+    Clip clip;
     public bajuadat() {
         initComponents();
-        
-        btnbefore.setVisible(false);
         this.setLocationRelativeTo(this);
     }
 
@@ -32,7 +38,6 @@ public class bajuadat extends javax.swing.JFrame {
     private void initComponents() {
 
         group = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        jPanelSlider1 = new diu.swe.habib.JPanelSlider.JPanelSlider();
         a1 = new javax.swing.JPanel();
         baju = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -135,17 +140,15 @@ public class bajuadat extends javax.swing.JFrame {
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        no = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
-        group.setBorder(null);
-        group.setOpaque(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanelSlider1.setBorder(null);
-        jPanelSlider1.setOpaque(false);
+        group.setBorder(null);
+        group.setOpaque(false);
 
         a1.setOpaque(false);
         a1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -156,7 +159,7 @@ public class bajuadat extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
         a1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a1, "card2");
+        group.add(a1, "card2");
 
         a2.setOpaque(false);
         a2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -167,361 +170,361 @@ public class bajuadat extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t2.png"))); // NOI18N
         a2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a2, "card2");
+        group.add(a2, "card2");
 
         a3.setOpaque(false);
         a3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b3.png"))); // NOI18N
         a3.add(baju2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t3.png"))); // NOI18N
         a3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a3, "card2");
+        group.add(a3, "card2");
 
         a4.setOpaque(false);
         a4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b4.png"))); // NOI18N
         a4.add(baju3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t4.png"))); // NOI18N
         a4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a4, "card2");
+        group.add(a4, "card2");
 
         a5.setOpaque(false);
         a5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b5.png"))); // NOI18N
         a5.add(baju4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t5.png"))); // NOI18N
         a5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a5, "card2");
+        group.add(a5, "card2");
 
         a6.setOpaque(false);
         a6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b6.png"))); // NOI18N
         a6.add(baju5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t6.png"))); // NOI18N
         a6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a6, "card2");
+        group.add(a6, "card2");
 
         a7.setOpaque(false);
         a7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b7.png"))); // NOI18N
         a7.add(baju6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t7.png"))); // NOI18N
         a7.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a7, "card2");
+        group.add(a7, "card2");
 
         a8.setOpaque(false);
         a8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b8.png"))); // NOI18N
         a8.add(baju7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t8.png"))); // NOI18N
         a8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a8, "card2");
+        group.add(a8, "card2");
 
         a9.setOpaque(false);
         a9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b9.png"))); // NOI18N
         a9.add(baju8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t9.png"))); // NOI18N
         a9.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a9, "card2");
+        group.add(a9, "card2");
 
         a10.setOpaque(false);
         a10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b10.png"))); // NOI18N
         a10.add(baju9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t10.png"))); // NOI18N
         a10.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a10, "card2");
+        group.add(a10, "card2");
 
         a11.setOpaque(false);
         a11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b11.png"))); // NOI18N
         a11.add(baju10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t11.png"))); // NOI18N
         a11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a11, "card2");
+        group.add(a11, "card2");
 
         a12.setOpaque(false);
         a12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b12.png"))); // NOI18N
         a12.add(baju11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t12.png"))); // NOI18N
         a12.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a12, "card2");
+        group.add(a12, "card2");
 
         a13.setOpaque(false);
         a13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b13.png"))); // NOI18N
         a13.add(baju12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t13.png"))); // NOI18N
         a13.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a13, "card2");
+        group.add(a13, "card2");
 
         a14.setOpaque(false);
         a14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b14.png"))); // NOI18N
         a14.add(baju13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t14.png"))); // NOI18N
         a14.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a14, "card2");
+        group.add(a14, "card2");
 
         a15.setOpaque(false);
         a15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b15.png"))); // NOI18N
         a15.add(baju14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t15.png"))); // NOI18N
         a15.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a15, "card2");
+        group.add(a15, "card2");
 
         a16.setOpaque(false);
         a16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b16.png"))); // NOI18N
         a16.add(baju15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t16.png"))); // NOI18N
         a16.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a16, "card2");
+        group.add(a16, "card2");
 
         a17.setOpaque(false);
         a17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b17.png"))); // NOI18N
         a17.add(baju16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t17.png"))); // NOI18N
         a17.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a17, "card2");
+        group.add(a17, "card2");
 
         a18.setOpaque(false);
         a18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b18.png"))); // NOI18N
         a18.add(baju17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t18.png"))); // NOI18N
         a18.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a18, "card2");
+        group.add(a18, "card2");
 
         a19.setOpaque(false);
         a19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b19.png"))); // NOI18N
         a19.add(baju18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t19.png"))); // NOI18N
         a19.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a19, "card2");
+        group.add(a19, "card2");
 
         a20.setOpaque(false);
         a20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b20.png"))); // NOI18N
         a20.add(baju19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t20.png"))); // NOI18N
         a20.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a20, "card2");
+        group.add(a20, "card2");
 
         a21.setOpaque(false);
         a21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b21.png"))); // NOI18N
         a21.add(baju20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t21.png"))); // NOI18N
         a21.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a21, "card2");
+        group.add(a21, "card2");
 
         a22.setOpaque(false);
         a22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b22.png"))); // NOI18N
         a22.add(baju21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t22.png"))); // NOI18N
         a22.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a22, "card2");
+        group.add(a22, "card2");
 
         a23.setOpaque(false);
         a23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b23.png"))); // NOI18N
         a23.add(baju22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t23.png"))); // NOI18N
         a23.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a23, "card2");
+        group.add(a23, "card2");
 
         a24.setOpaque(false);
         a24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b24.png"))); // NOI18N
         a24.add(baju23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t24.png"))); // NOI18N
         a24.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a24, "card2");
+        group.add(a24, "card2");
 
         a25.setOpaque(false);
         a25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b25.png"))); // NOI18N
         a25.add(baju24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t25.png"))); // NOI18N
         a25.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a25, "card2");
+        group.add(a25, "card2");
 
         a26.setOpaque(false);
         a26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b26.png"))); // NOI18N
         a26.add(baju25, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t26.png"))); // NOI18N
         a26.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a26, "card2");
+        group.add(a26, "card2");
 
         a27.setOpaque(false);
         a27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b27.png"))); // NOI18N
         a27.add(baju26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t27.png"))); // NOI18N
         a27.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a27, "card2");
+        group.add(a27, "card2");
 
         a28.setOpaque(false);
         a28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b28.png"))); // NOI18N
         a28.add(baju27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t28.png"))); // NOI18N
         a28.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a28, "card2");
+        group.add(a28, "card2");
 
         a29.setOpaque(false);
         a29.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b29.png"))); // NOI18N
         a29.add(baju28, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t29.png"))); // NOI18N
         a29.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a29, "card2");
+        group.add(a29, "card2");
 
         a30.setOpaque(false);
         a30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b30.png"))); // NOI18N
         a30.add(baju29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t30.png"))); // NOI18N
         a30.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a30, "card2");
+        group.add(a30, "card2");
 
         a31.setOpaque(false);
         a31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b31.png"))); // NOI18N
         a31.add(baju30, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t31.png"))); // NOI18N
         a31.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a31, "card2");
+        group.add(a31, "card2");
 
         a32.setOpaque(false);
         a32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b32.png"))); // NOI18N
         a32.add(baju31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t32.png"))); // NOI18N
         a32.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a32, "card2");
+        group.add(a32, "card2");
 
         a33.setOpaque(false);
         a33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        baju32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b1.png"))); // NOI18N
+        baju32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/b33.png"))); // NOI18N
         a33.add(baju32, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 300, 410));
 
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t1.png"))); // NOI18N
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baju/t33.png"))); // NOI18N
         a33.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 537, 57));
 
-        jPanelSlider1.add(a33, "card2");
+        group.add(a33, "card2");
 
-        getContentPane().add(jPanelSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 550, 580));
+        getContentPane().add(group, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 550, 580));
 
         btnbefore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
         btnbefore.setBorderPainted(false);
         btnbefore.setContentAreaFilled(false);
-        btnbefore.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
+        btnbefore.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev2.png"))); // NOI18N
         btnbefore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbeforeActionPerformed(evt);
             }
         });
-        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, -1, -1));
+        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         btnnext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
         btnnext.setBorderPainted(false);
@@ -545,6 +548,10 @@ public class bajuadat extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
 
+        no.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        no.setText("1");
+        getContentPane().add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 100));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroung baju.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
@@ -552,14 +559,21 @@ public class bajuadat extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
-              
+        if (set==1) {
+            set=34;
+        }
+        set--; 
+        no.setText(""+set);
+        kurang();
     }//GEN-LAST:event_btnbeforeActionPerformed
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
-        group.nextPanel(50, group, group.left);
-        btnbefore.setVisible(true);
-        btnnext.setVisible(false);
-        
+        if (set==33) {
+            set=0;
+        }
+        set++;
+        no.setText(""+set);
+        tambah();
     }//GEN-LAST:event_btnnextActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -568,10 +582,92 @@ public class bajuadat extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 public void kurang(){
+    int kecepatan = 25;
 switch (set){
-    case 0 : group.nextPanel(50, group, group.right); break;
+    case 1 : group.nextPanel(kecepatan, a1, group.right); break;
+    case 2 : group.nextPanel(kecepatan, a2, group.right); break;
+    case 3 : group.nextPanel(kecepatan, a3, group.right); break;
+    case 4 : group.nextPanel(kecepatan, a4, group.right); break;
+    case 5 : group.nextPanel(kecepatan, a5, group.right); break;
+    case 6 : group.nextPanel(kecepatan, a6, group.right); break;
+    case 7 : group.nextPanel(kecepatan, a7, group.right); break;
+    case 8 : group.nextPanel(kecepatan, a8, group.right); break;
+    case 9 : group.nextPanel(kecepatan, a9, group.right); break;
+    case 11 : group.nextPanel(kecepatan, a11, group.right); break;
+    case 12 : group.nextPanel(kecepatan, a12, group.right); break;
+    case 13 : group.nextPanel(kecepatan, a13, group.right); break;
+    case 14 : group.nextPanel(kecepatan, a14, group.right); break;
+    case 15 : group.nextPanel(kecepatan, a15, group.right); break;
+    case 16 : group.nextPanel(kecepatan, a16, group.right); break;
+    case 17 : group.nextPanel(kecepatan, a17, group.right); break;
+    case 18 : group.nextPanel(kecepatan, a18, group.right); break;
+    case 19 : group.nextPanel(kecepatan, a19, group.right); break;
+    case 21 : group.nextPanel(kecepatan, a21, group.right); break;
+    case 22 : group.nextPanel(kecepatan, a22, group.right); break;
+    case 23 : group.nextPanel(kecepatan, a23, group.right); break;
+    case 24 : group.nextPanel(kecepatan, a24, group.right); break;
+    case 25 : group.nextPanel(kecepatan, a25, group.right); break;
+    case 26 : group.nextPanel(kecepatan, a26, group.right); break;
+    case 27 : group.nextPanel(kecepatan, a27, group.right); break;
+    case 28 : group.nextPanel(kecepatan, a28, group.right); break;
+    case 29 : group.nextPanel(kecepatan, a29, group.right); break;
+    case 30 : group.nextPanel(kecepatan, a30, group.right); break;
+    case 31 : group.nextPanel(kecepatan, a31, group.right); break;
+    case 32 : group.nextPanel(kecepatan, a32, group.right); break;
+    case 33 : group.nextPanel(kecepatan, a33, group.right); break;
 }
+Musik_Play();
 }
+public void tambah(){
+    int kecepatan = 25;
+switch (set){
+    case 1 : group.nextPanel(kecepatan, a1, group.left); break;
+    case 2 : group.nextPanel(kecepatan, a2, group.left); break;
+    case 3 : group.nextPanel(kecepatan, a3, group.left); break;
+    case 4 : group.nextPanel(kecepatan, a4, group.left); break;
+    case 5 : group.nextPanel(kecepatan, a5, group.left); break;
+    case 6 : group.nextPanel(kecepatan, a6, group.left); break;
+    case 7 : group.nextPanel(kecepatan, a7, group.left); break;
+    case 8 : group.nextPanel(kecepatan, a8, group.left); break;
+    case 9 : group.nextPanel(kecepatan, a9, group.left); break;
+    case 10 : group.nextPanel(kecepatan, a10, group.left); break;
+    case 11 : group.nextPanel(kecepatan, a11, group.left); break;
+    case 12 : group.nextPanel(kecepatan, a12, group.left); break;
+    case 13 : group.nextPanel(kecepatan, a13, group.left); break;
+    case 14 : group.nextPanel(kecepatan, a14, group.left); break;
+    case 15 : group.nextPanel(kecepatan, a15, group.left); break;
+    case 16 : group.nextPanel(kecepatan, a16, group.left); break;
+    case 17 : group.nextPanel(kecepatan, a17, group.left); break;
+    case 18 : group.nextPanel(kecepatan, a18, group.left); break;
+    case 19 : group.nextPanel(kecepatan, a19, group.left); break;
+    case 20 : group.nextPanel(kecepatan, a20, group.left); break;
+    case 21 : group.nextPanel(kecepatan, a21, group.left); break;
+    case 22 : group.nextPanel(kecepatan, a22, group.left); break;
+    case 23 : group.nextPanel(kecepatan, a23, group.left); break;
+    case 24 : group.nextPanel(kecepatan, a24, group.left); break;
+    case 25 : group.nextPanel(kecepatan, a25, group.left); break;
+    case 26 : group.nextPanel(kecepatan, a26, group.left); break;
+    case 27 : group.nextPanel(kecepatan, a27, group.left); break;
+    case 28 : group.nextPanel(kecepatan, a28, group.left); break;
+    case 29 : group.nextPanel(kecepatan, a29, group.left); break;
+    case 30 : group.nextPanel(kecepatan, a30, group.left); break;
+    case 31 : group.nextPanel(kecepatan, a31, group.left); break;
+    case 32 : group.nextPanel(kecepatan, a32, group.left); break;
+    case 33 : group.nextPanel(kecepatan, a33, group.left); break;
+}
+Musik_Play();
+}
+public void Musik_Play() {
+        try {
+            audioIn = AudioSystem.getAudioInputStream(new File("src\\suara_propinsi\\propinsi"+set+".wav"));
+            
+            clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.loop(0);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -713,6 +809,6 @@ switch (set){
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider1;
+    private javax.swing.JLabel no;
     // End of variables declaration//GEN-END:variables
 }
