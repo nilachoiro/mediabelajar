@@ -59,6 +59,11 @@ public class mainmenu extends javax.swing.JFrame {
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
         jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibendera_HOVER.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, -1, -1));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibajuadat.png"))); // NOI18N
@@ -110,6 +115,10 @@ public class mainmenu extends javax.swing.JFrame {
        c.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

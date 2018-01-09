@@ -580,7 +580,7 @@ public class huruf extends javax.swing.JFrame {
        
     public void play_sound_huruf(char huruf) {
         try {
-            audioIn = AudioSystem.getAudioInputStream(new File("src\\suara_huruf\\" + huruf + ".wav"));
+            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
             clip = AudioSystem.getClip();
             clip.open(audioIn);
             clip.loop(0);
