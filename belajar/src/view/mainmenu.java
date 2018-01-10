@@ -85,11 +85,7 @@ public class mainmenu extends javax.swing.JFrame {
         angka.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsiangka.png"))); // NOI18N
         angka.setBorderPainted(false);
         angka.setContentAreaFilled(false);
-<<<<<<< HEAD
-        angka.setDefaultCapable(false);
-=======
         angka.setFocusPainted(false);
->>>>>>> c6beedd6412df9d8fdad703f259485561a28bc81
         angka.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsiangka_HOVER.png"))); // NOI18N
         angka.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

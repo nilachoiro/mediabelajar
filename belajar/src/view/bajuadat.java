@@ -42,12 +42,10 @@ public class bajuadat extends javax.swing.JFrame {
         for (int i = 0; i < 33; i++) {
             //tambah gambar baju
             ImageIcon image = new ImageIcon("aset\\baju\\b" + (i + 1) + ".png");
-            System.out.println("aset\\baju\\b" + (i + 1) + ".png");
             JLabel imagelabel = new JLabel(image);
             panelArraybaju[i].add(imagelabel);
             //tambah title provinsi
             ImageIcon image2 = new ImageIcon("aset\\baju\\t" + (i + 1) + ".png");
-            System.out.println("aset\\baju\\t" + (i + 1) + ".png");
             JLabel imagelabel2 = new JLabel(image2);
             panelArraytitle[i].add(imagelabel2);
             //memasukan ke panel            
@@ -136,7 +134,6 @@ public class bajuadat extends javax.swing.JFrame {
         if (set==-1) {
             set=32;
         }
-        System.out.println("set ke ="+set);
         groupbaju.nextPanel(25, panelArraybaju[set], groupbaju.right);
         grouptitle.nextPanel(25, panelArraytitle[set], groupbaju.right);
         Musik_Play();
@@ -149,7 +146,6 @@ public class bajuadat extends javax.swing.JFrame {
         if (set==33) {
             set=0;
         }
-        System.out.println("set ke ="+set);
         groupbaju.nextPanel(25, panelArraybaju[set], groupbaju.left);
         grouptitle.nextPanel(25, panelArraytitle[set], groupbaju.left);
         Musik_Play();
