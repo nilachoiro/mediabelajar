@@ -26,7 +26,6 @@ public class huruf extends javax.swing.JFrame {
     public huruf() {
         initComponents();
         btnbefore.setVisible(false);
-        btnok.setVisible(false);
     }
 
     /**
