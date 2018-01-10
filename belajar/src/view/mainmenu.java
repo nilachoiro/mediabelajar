@@ -48,6 +48,7 @@ public class mainmenu extends javax.swing.JFrame {
         abc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsihuruf.png"))); // NOI18N
         abc.setBorderPainted(false);
         abc.setContentAreaFilled(false);
+        abc.setFocusPainted(false);
         abc.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsihuruf_HOVER.png"))); // NOI18N
         abc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +60,7 @@ public class mainmenu extends javax.swing.JFrame {
         bendera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibendera.png"))); // NOI18N
         bendera.setBorderPainted(false);
         bendera.setContentAreaFilled(false);
+        bendera.setFocusPainted(false);
         bendera.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibendera_HOVER.png"))); // NOI18N
         bendera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +73,7 @@ public class mainmenu extends javax.swing.JFrame {
         baju.setText("t");
         baju.setBorderPainted(false);
         baju.setContentAreaFilled(false);
+        baju.setFocusPainted(false);
         baju.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibajuadat_HOVER.png"))); // NOI18N
         baju.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +85,11 @@ public class mainmenu extends javax.swing.JFrame {
         angka.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsiangka.png"))); // NOI18N
         angka.setBorderPainted(false);
         angka.setContentAreaFilled(false);
+<<<<<<< HEAD
+        angka.setDefaultCapable(false);
+=======
+        angka.setFocusPainted(false);
+>>>>>>> c6beedd6412df9d8fdad703f259485561a28bc81
         angka.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsiangka_HOVER.png"))); // NOI18N
         angka.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +104,7 @@ public class mainmenu extends javax.swing.JFrame {
         exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_exit.png"))); // NOI18N
         exit.setBorderPainted(false);
         exit.setContentAreaFilled(false);
+        exit.setFocusPainted(false);
         exit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_exit hover.png"))); // NOI18N
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

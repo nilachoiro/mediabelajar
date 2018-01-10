@@ -33,6 +33,7 @@
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/image/opsihuruf_HOVER.png"/>
         </Property>
@@ -53,6 +54,7 @@
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/image/opsibendera_HOVER.png"/>
         </Property>
@@ -74,6 +76,7 @@
         <Property name="text" type="java.lang.String" value="t"/>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/image/opsibajuadat_HOVER.png"/>
         </Property>
@@ -94,6 +97,11 @@
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
+<<<<<<< HEAD
+        <Property name="defaultCapable" type="boolean" value="false"/>
+=======
+        <Property name="focusPainted" type="boolean" value="false"/>
+>>>>>>> c6beedd6412df9d8fdad703f259485561a28bc81
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/image/opsiangka_HOVER.png"/>
         </Property>
@@ -126,6 +134,7 @@
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/image/b_exit hover.png"/>
         </Property>

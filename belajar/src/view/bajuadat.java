@@ -84,6 +84,7 @@ public class bajuadat extends javax.swing.JFrame {
         btnbefore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
         btnbefore.setBorderPainted(false);
         btnbefore.setContentAreaFilled(false);
+        btnbefore.setFocusPainted(false);
         btnbefore.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev2.png"))); // NOI18N
         btnbefore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +96,7 @@ public class bajuadat extends javax.swing.JFrame {
         btnnext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
         btnnext.setBorderPainted(false);
         btnnext.setContentAreaFilled(false);
+        btnnext.setFocusPainted(false);
         btnnext.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext2.png"))); // NOI18N
         btnnext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +108,7 @@ public class bajuadat extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
         jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome2.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
