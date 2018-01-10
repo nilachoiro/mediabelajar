@@ -70,7 +70,6 @@ public class huruf extends javax.swing.JFrame {
         show = new javax.swing.JPanel();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
-        btnok = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -87,6 +86,7 @@ public class huruf extends javax.swing.JFrame {
         a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/a.png"))); // NOI18N
         a.setBorderPainted(false);
         a.setContentAreaFilled(false);
+        a.setFocusPainted(false);
         a.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/aa.png"))); // NOI18N
         a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +98,7 @@ public class huruf extends javax.swing.JFrame {
         b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/b.png"))); // NOI18N
         b.setBorderPainted(false);
         b.setContentAreaFilled(false);
+        b.setFocusPainted(false);
         b.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/bb.png"))); // NOI18N
         b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +110,7 @@ public class huruf extends javax.swing.JFrame {
         c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/c.png"))); // NOI18N
         c.setBorderPainted(false);
         c.setContentAreaFilled(false);
+        c.setFocusPainted(false);
         c.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/cc.png"))); // NOI18N
         c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +122,7 @@ public class huruf extends javax.swing.JFrame {
         d.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/d.png"))); // NOI18N
         d.setBorderPainted(false);
         d.setContentAreaFilled(false);
+        d.setFocusPainted(false);
         d.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/dd.png"))); // NOI18N
         d.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/dd.png"))); // NOI18N
         d.addActionListener(new java.awt.event.ActionListener() {
@@ -132,17 +135,19 @@ public class huruf extends javax.swing.JFrame {
         e.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/e.png"))); // NOI18N
         e.setBorderPainted(false);
         e.setContentAreaFilled(false);
+        e.setFocusPainted(false);
         e.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/ee.png"))); // NOI18N
         e.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eActionPerformed(evt);
             }
         });
-        group1.add(e, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, -1, -1));
+        group1.add(e, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, -1, -1));
 
         f.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/f.png"))); // NOI18N
         f.setBorderPainted(false);
         f.setContentAreaFilled(false);
+        f.setFocusPainted(false);
         f.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/ff.png"))); // NOI18N
         f.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,28 +159,31 @@ public class huruf extends javax.swing.JFrame {
         g.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/g.png"))); // NOI18N
         g.setBorderPainted(false);
         g.setContentAreaFilled(false);
+        g.setFocusPainted(false);
         g.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/gg.png"))); // NOI18N
         g.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gActionPerformed(evt);
             }
         });
-        group1.add(g, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, -1, -1));
+        group1.add(g, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, -1, -1));
 
         h.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/h.png"))); // NOI18N
         h.setBorderPainted(false);
         h.setContentAreaFilled(false);
+        h.setFocusPainted(false);
         h.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/hh.png"))); // NOI18N
         h.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hActionPerformed(evt);
             }
         });
-        group1.add(h, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, -1));
+        group1.add(h, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
 
         i.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/i.png"))); // NOI18N
         i.setBorderPainted(false);
         i.setContentAreaFilled(false);
+        i.setFocusPainted(false);
         i.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/ii.png"))); // NOI18N
         i.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +195,7 @@ public class huruf extends javax.swing.JFrame {
         j.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/j.png"))); // NOI18N
         j.setBorderPainted(false);
         j.setContentAreaFilled(false);
+        j.setFocusPainted(false);
         j.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/jj.png"))); // NOI18N
         j.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,35 +207,38 @@ public class huruf extends javax.swing.JFrame {
         k.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/k.png"))); // NOI18N
         k.setBorderPainted(false);
         k.setContentAreaFilled(false);
+        k.setFocusPainted(false);
         k.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/kk.png"))); // NOI18N
         k.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kActionPerformed(evt);
             }
         });
-        group1.add(k, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, -1, -1));
+        group1.add(k, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, -1, -1));
 
         l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/l.png"))); // NOI18N
         l.setBorderPainted(false);
         l.setContentAreaFilled(false);
+        l.setFocusPainted(false);
         l.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/ll.png"))); // NOI18N
         l.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lActionPerformed(evt);
             }
         });
-        group1.add(l, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, -1, -1));
+        group1.add(l, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
 
         m.setIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/m.png"))); // NOI18N
         m.setBorderPainted(false);
         m.setContentAreaFilled(false);
+        m.setFocusPainted(false);
         m.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/huruf/mm.png"))); // NOI18N
         m.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mActionPerformed(evt);
             }
         });
-        group1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, -1, -1));
+        group1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 270, -1, -1));
 
         grouphuruf.add(group1, "card2");
 
@@ -420,9 +432,6 @@ public class huruf extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 590, -1, -1));
-
-        btnok.setText("ok");
-        getContentPane().add(btnok, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -642,7 +651,6 @@ public class huruf extends javax.swing.JFrame {
     private javax.swing.JButton b;
     private javax.swing.JButton btnbefore;
     private javax.swing.JButton btnnext;
-    private javax.swing.JButton btnok;
     private javax.swing.JButton c;
     private javax.swing.JButton d;
     private javax.swing.JButton e;
