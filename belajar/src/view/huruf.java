@@ -429,14 +429,14 @@ public class huruf extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
-        grouphuruf.nextPanel(50, group1, grouphuruf.right);
+        grouphuruf.nextPanel(20, group1, grouphuruf.right);
         btnnext.setVisible(true);
         btnbefore.setVisible(false);
 
     }//GEN-LAST:event_btnbeforeActionPerformed
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
-        grouphuruf.nextPanel(50, group2, grouphuruf.left);
+        grouphuruf.nextPanel(20, group2, grouphuruf.left);
         btnbefore.setVisible(true);
         btnnext.setVisible(false);
 
