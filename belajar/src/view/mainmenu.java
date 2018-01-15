@@ -134,7 +134,9 @@ public class mainmenu extends javax.swing.JFrame {
     }//GEN-LAST:event_angkaActionPerformed
 
     private void benderaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_benderaActionPerformed
-        // TODO add your handling code here:
+        negara_bendera a = new negara_bendera();
+        a.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_benderaActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed

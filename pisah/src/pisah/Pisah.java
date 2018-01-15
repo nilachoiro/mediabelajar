@@ -45,15 +45,9 @@ public class Pisah {
 //            
 //        }
 //        System.out.println(array.length);
-
-File dir = new File ("aset\\bendera_jpg\\afrika\\afrika utara");
-String[] files = dir.list();
-        for (int i = 0; i < files.length; i++) {
-            if (files[i].endsWith(".jpg")) {
-                System.out.println("file ke "+i+" = "+files[i]);
-            }
-            
-        }
+String directory = "aset\\bendera_jpg\\afrika\\afrikautara";
+generatepanel a = new generatepanel(directory);
+a.setVisible(true);
     }
     
 }

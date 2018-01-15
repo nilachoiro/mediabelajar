@@ -5,6 +5,15 @@
  */
 package view;
 
+import java.awt.CardLayout;
+import java.awt.Panel;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -14,13 +23,19 @@ import javax.swing.JPanel;
 public class tampil_bendera extends javax.swing.JFrame {
 
     /**
-     * Creates new form tampil_bendera
+     * Creates new form generatepanel
      */
-    
     int set = 0;
-    public tampil_bendera() {
-        JPanel[] panelArray = new JPanel[7];
+    String[] namanegara;
+    JPanel[] panelArray;
+AudioInputStream audioIn;
+    Clip clip;
+    String lokasi;
+    public tampil_bendera(String directory) {
         initComponents();
+setpanel(directory);
+        box_nama.setText(namanegara[0].replace(".jpg",""));
+lokasi=directory;
     }
 
     /**
@@ -33,34 +48,180 @@ public class tampil_bendera extends javax.swing.JFrame {
     private void initComponents() {
 
         panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        box_nama = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelutama.setBorder(null);
         panelutama.setOpaque(false);
 
-        jPanel1.setOpaque(false);
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bendera_jpg/afrika/afrika utara/aljazair.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 370));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 454, 540, 80));
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        panelutama.add(jPanel1, "card2");
-
-        getContentPane().add(panelutama, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 550, 540));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setFocusPainted(false);
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgbendera.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
+
+        box_nama.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        box_nama.setText("nama nya");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                        .addComponent(panelutama, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(88, 88, 88)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(246, 246, 246)
+                        .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1030, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(205, 205, 205)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(panelutama, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3)
+                .addGap(7, 7, 7))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+public void setpanel(String directory) {
+        File dir = new File(directory);
+        String[] files;
+        files = dir.list();
+        int totalbendera=0;
+        //cari jumlah .jpg
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].endsWith(".jpg")) {
+                System.out.println("file ke " + i + " = " + files[i]);
+                totalbendera++;
+            }
+        }
+        //isi nama negara .jpg
+        namanegara= new String[totalbendera];
+        int count=0;
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].endsWith(".jpg")) {
+                namanegara[count]=files[i];
+                count++;
+            }
+        }
+        
+        panelArray = new JPanel[totalbendera];
+        for (int i = 0; i < totalbendera; i++) {
+            panelArray[i] = new JPanel(new CardLayout());
+        }
+        panelutama.setLayout(new CardLayout());
+        for (int i = 0; i < totalbendera; i++) {
+            ImageIcon image = new ImageIcon(directory+"\\" + namanegara[i]);
+            JLabel imagelabel = new JLabel(image);
+            panelArray[i].add(imagelabel);
+        }
+        for (int i = 0; i < totalbendera; i++) {
+            panelutama.add(panelArray[i]);
+        }
+        panelArray[0].setVisible(true);
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        set++;
+        int total = namanegara.length;
+        System.out.println("total"+namanegara.length);
+        if (set == total) {
+            set = 0;
+        }
+        System.out.println("set ke =" + set);
+        panelutama.nextPanel(25, panelArray[set], panelutama.left);
+        box_nama.setText(namanegara[set].replace(".jpg",""));
+Musik_Play();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        set--;
+        int total = namanegara.length-1;
+        System.out.println("total"+namanegara.length);
+        if (set == -1) {
+            set = total;
+        }
+        System.out.println("set ke =" + set);
+        panelutama.nextPanel(25, panelArray[set], panelutama.right);
+        box_nama.setText(namanegara[set].replace(".jpg",""));
+        Musik_Play();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        negara_bendera a = new negara_bendera();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+public void Musik_Play() {
+        try {
+            audioIn = AudioSystem.getAudioInputStream(new File(lokasi+"/"+(set+1)+".wav"));
+            
+            clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.loop(0);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -92,16 +253,16 @@ public class tampil_bendera extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tampil_bendera().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel box_nama;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     private diu.swe.habib.JPanelSlider.JPanelSlider panelutama;
     // End of variables declaration//GEN-END:variables
 }

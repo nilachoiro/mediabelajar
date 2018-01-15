@@ -7,46 +7,27 @@ package pisah;
 
 import java.awt.CardLayout;
 import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import javax.swing.DefaultComboBoxModel;
+import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import open.usu.awt.util.GraphicUtilities;
-import open.usu.swing.ImageTransition;
 
 /**
  *
  * @author acer
  */
-public class generatepanel extends javax.swing.JFrame implements ActionListener{
+public class generatepanel extends javax.swing.JFrame {
 
     /**
      * Creates new form generatepanel
      */
-    JPanel[] panelArray = new JPanel[7];
     int set = 0;
-private static final long serialVersionUID = 1L;
-    private BufferedImage image;
-    public generatepanel() {
+    String[] files;
+    JPanel[] panelArray;
+
+    public generatepanel(String directory) {
         initComponents();
-        
-        for (int i = 0; i < 7; i++) {
-           panelArray[i]=new JPanel(new CardLayout());
-        }
-        panelutama.setLayout(new CardLayout());
-        for (int i = 0; i < 7; i++) {
-            ImageIcon image = new ImageIcon("aset\\afrika\\afrika_utara\\" + (i + 1) + ".jpg");
-            System.out.println("src\\afrika_utara\\" + (i + 1) + ".jpg");
-            JLabel imagelabel = new JLabel(image);
-            panelArray[i].add(imagelabel);
-        }
-        for (int i = 0; i < 7; i++) {
-            panelutama.add(panelArray[i]);
-        }
-        panelArray[0].setVisible(true);
+setpanel(directory);
     }
 
     /**
@@ -59,24 +40,10 @@ private static final long serialVersionUID = 1L;
     private void initComponents() {
 
         panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        imageTransition = new open.usu.swing.EImageTransition();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout imageTransitionLayout = new javax.swing.GroupLayout(imageTransition);
-        imageTransition.setLayout(imageTransitionLayout);
-        imageTransitionLayout.setHorizontalGroup(
-            imageTransitionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        imageTransitionLayout.setVerticalGroup(
-            imageTransitionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        panelutama.add(imageTransition, "card3");
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -123,29 +90,45 @@ private static final long serialVersionUID = 1L;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+public void setpanel(String directory) {
+        File dir = new File(directory);
+        files = dir.list();
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].endsWith(".jpg")) {
+                System.out.println("file ke " + i + " = " + files[i]);
+            }
+        }
+        panelArray = new JPanel[files.length];
+        for (int i = 0; i < files.length; i++) {
+            panelArray[i] = new JPanel(new CardLayout());
+        }
+        panelutama.setLayout(new CardLayout());
+        for (int i = 0; i < files.length; i++) {
+            ImageIcon image = new ImageIcon(directory+"\\" + files[i]);
+            JLabel imagelabel = new JLabel(image);
+            panelArray[i].add(imagelabel);
+        }
+        for (int i = 0; i < files.length; i++) {
+            panelutama.add(panelArray[i]);
+        }
+        panelArray[0].setVisible(true);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         set++;
-        if (set==7) {
-            set=0;
+        if (set == files.length + 1) {
+            set = 0;
         }
-        image = new BufferedImage(panelutama.getWidth(), panelutama.getHeight(), BufferedImage.TYPE_INT_ARGB);
-        imageTransition.setImageTransition(ImageTransition.BOX_OUT);
-    GraphicUtilities.getBufferedImageFromComponent(panelutama, image);
-    
-    imageTransition.setImage(image);
-    imageTransition.setPointTransition(GraphicUtilities.getLocationForComponent(panelutama, imageTransition));
-    imageTransition.startTransition(500);
-    ((CardLayout) panelArray[set].getLayout()).show(panelutama, evt.getActionCommand());
+        System.out.println("set ke =" + set);
+        panelutama.nextPanel(25, panelArray[set], panelutama.left);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         set--;
-        if (set==-1) {
-            set=6;
+        if (set == -1) {
+            set = files.length;
         }
-        System.out.println("set ke ="+set);
+        System.out.println("set ke =" + set);
         panelutama.nextPanel(25, panelArray[set], panelutama.right);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -179,20 +162,13 @@ private static final long serialVersionUID = 1L;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new generatepanel().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private open.usu.swing.EImageTransition imageTransition;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private diu.swe.habib.JPanelSlider.JPanelSlider panelutama;
     // End of variables declaration//GEN-END:variables
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
