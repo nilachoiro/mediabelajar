@@ -28,14 +28,15 @@ public class tampil_bendera extends javax.swing.JFrame {
     int set = 0;
     String[] namanegara;
     JPanel[] panelArray;
-AudioInputStream audioIn;
+    AudioInputStream audioIn;
     Clip clip;
     String lokasi;
+
     public tampil_bendera(String directory) {
         initComponents();
-setpanel(directory);
-        box_nama.setText(namanegara[0].replace(".jpg",""));
-lokasi=directory;
+        setpanel(directory);
+        box_nama.setText(namanegara[0].replace(".jpg", ""));
+        lokasi = directory;
     }
 
     /**
@@ -51,21 +52,31 @@ lokasi=directory;
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         box_nama = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         panelutama.setOpaque(false);
 
-        jButton1.setText("jButton1");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
+        jButton1.setActionCommand("");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext2.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("jButton2");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setFocusPainted(false);
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev2.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -83,62 +94,59 @@ lokasi=directory;
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgbendera.png"))); // NOI18N
-
         box_nama.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         box_nama.setText("nama nya");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgbendera.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
-                        .addComponent(panelutama, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 88, 88)
-                        .addComponent(jButton1))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jButton2)
+                        .addGap(123, 123, 123)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panelutama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(112, 112, 112)
+                                .addComponent(jButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 265, Short.MAX_VALUE)))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1030, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(206, 206, 206)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(205, 205, 205)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(panelutama, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addGap(126, 126, 126)
+                        .addComponent(panelutama, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addGap(7, 7, 7))
+                .addGap(143, 143, 143))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(206, 206, 206)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 781, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 11, Short.MAX_VALUE)))
         );
 
         pack();
@@ -147,7 +155,7 @@ public void setpanel(String directory) {
         File dir = new File(directory);
         String[] files;
         files = dir.list();
-        int totalbendera=0;
+        int totalbendera = 0;
         //cari jumlah .jpg
         for (int i = 0; i < files.length; i++) {
             if (files[i].endsWith(".jpg")) {
@@ -156,22 +164,22 @@ public void setpanel(String directory) {
             }
         }
         //isi nama negara .jpg
-        namanegara= new String[totalbendera];
-        int count=0;
+        namanegara = new String[totalbendera];
+        int count = 0;
         for (int i = 0; i < files.length; i++) {
             if (files[i].endsWith(".jpg")) {
-                namanegara[count]=files[i];
+                namanegara[count] = files[i];
                 count++;
             }
         }
-        
+
         panelArray = new JPanel[totalbendera];
         for (int i = 0; i < totalbendera; i++) {
             panelArray[i] = new JPanel(new CardLayout());
         }
         panelutama.setLayout(new CardLayout());
         for (int i = 0; i < totalbendera; i++) {
-            ImageIcon image = new ImageIcon(directory+"\\" + namanegara[i]);
+            ImageIcon image = new ImageIcon(directory + "\\" + namanegara[i]);
             JLabel imagelabel = new JLabel(image);
             panelArray[i].add(imagelabel);
         }
@@ -183,26 +191,26 @@ public void setpanel(String directory) {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         set++;
         int total = namanegara.length;
-        System.out.println("total"+namanegara.length);
+        System.out.println("total" + namanegara.length);
         if (set == total) {
             set = 0;
         }
         System.out.println("set ke =" + set);
         panelutama.nextPanel(25, panelArray[set], panelutama.left);
-        box_nama.setText(namanegara[set].replace(".jpg",""));
-Musik_Play();
+        box_nama.setText(namanegara[set].replace(".jpg", ""));
+        Musik_Play();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         set--;
-        int total = namanegara.length-1;
-        System.out.println("total"+namanegara.length);
+        int total = namanegara.length - 1;
+        System.out.println("total" + namanegara.length);
         if (set == -1) {
             set = total;
         }
         System.out.println("set ke =" + set);
         panelutama.nextPanel(25, panelArray[set], panelutama.right);
-        box_nama.setText(namanegara[set].replace(".jpg",""));
+        box_nama.setText(namanegara[set].replace(".jpg", ""));
         Musik_Play();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -211,10 +219,10 @@ Musik_Play();
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-public void Musik_Play() {
+    public void Musik_Play() {
         try {
-            audioIn = AudioSystem.getAudioInputStream(new File(lokasi+"/"+(set+1)+".wav"));
-            
+            audioIn = AudioSystem.getAudioInputStream(new File(lokasi + "/" + (set + 1) + ".wav"));
+
             clip = AudioSystem.getClip();
             clip.open(audioIn);
             clip.loop(0);
@@ -222,6 +230,7 @@ public void Musik_Play() {
             JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
         }
     }
+
     /**
      * @param args the command line arguments
      */
@@ -253,6 +262,7 @@ public void Musik_Play() {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+
             }
         });
     }

@@ -40,14 +40,14 @@ public class negara_bendera extends javax.swing.JFrame {
         panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
         world = new javax.swing.JPanel();
         btnamerika = new javax.swing.JButton();
-        btnaustralia = new javax.swing.JButton();
         btnasia = new javax.swing.JButton();
         btneropa = new javax.swing.JButton();
         btnafrika = new javax.swing.JButton();
+        btnaustralia = new javax.swing.JButton();
         afrika = new javax.swing.JLabel();
         amerika = new javax.swing.JLabel();
-        eropa = new javax.swing.JLabel();
         australia = new javax.swing.JLabel();
+        eropa = new javax.swing.JLabel();
         asia = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         worlderopa = new javax.swing.JPanel();
@@ -73,10 +73,17 @@ public class negara_bendera extends javax.swing.JFrame {
         amerikautara = new javax.swing.JButton();
         amerikatengah = new javax.swing.JButton();
         amerikaselatan = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1024, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        panelutama.setBorder(null);
+        panelutama.setOpaque(false);
+
+        world.setOpaque(false);
         world.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnamerika.setBorderPainted(false);
@@ -94,24 +101,7 @@ public class negara_bendera extends javax.swing.JFrame {
                 btnamerikaActionPerformed(evt);
             }
         });
-        world.add(btnamerika, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 210, 410));
-
-        btnaustralia.setBorderPainted(false);
-        btnaustralia.setContentAreaFilled(false);
-        btnaustralia.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnaustraliaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnaustraliaMouseExited(evt);
-            }
-        });
-        btnaustralia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaustraliaActionPerformed(evt);
-            }
-        });
-        world.add(btnaustralia, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 280, 140));
+        world.add(btnamerika, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, 210, 410));
 
         btnasia.setBorderPainted(false);
         btnasia.setContentAreaFilled(false);
@@ -128,7 +118,7 @@ public class negara_bendera extends javax.swing.JFrame {
                 btnasiaActionPerformed(evt);
             }
         });
-        world.add(btnasia, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 290, 260));
+        world.add(btnasia, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 290, 260));
 
         btneropa.setBorderPainted(false);
         btneropa.setContentAreaFilled(false);
@@ -145,7 +135,7 @@ public class negara_bendera extends javax.swing.JFrame {
                 btneropaActionPerformed(evt);
             }
         });
-        world.add(btneropa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 180, 120));
+        world.add(btneropa, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 180, 120));
 
         btnafrika.setBorderPainted(false);
         btnafrika.setContentAreaFilled(false);
@@ -162,22 +152,39 @@ public class negara_bendera extends javax.swing.JFrame {
                 btnafrikaActionPerformed(evt);
             }
         });
-        world.add(btnafrika, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 190, 220));
+        world.add(btnafrika, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 190, 220));
+
+        btnaustralia.setBorderPainted(false);
+        btnaustralia.setContentAreaFilled(false);
+        btnaustralia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnaustraliaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnaustraliaMouseExited(evt);
+            }
+        });
+        btnaustralia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaustraliaActionPerformed(evt);
+            }
+        });
+        world.add(btnaustralia, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 280, 140));
 
         afrika.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonBenuaAfrika1.png"))); // NOI18N
-        world.add(afrika, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 230, 330));
+        world.add(afrika, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 230, 330));
 
         amerika.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonBenuaAmerika1.png"))); // NOI18N
-        world.add(amerika, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 410, 480));
-
-        eropa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonBenuaEropa1.png"))); // NOI18N
-        world.add(eropa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 260, 250));
+        world.add(amerika, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 410, 480));
 
         australia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonBenuaAustralia1.png"))); // NOI18N
-        world.add(australia, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 270, 210));
+        world.add(australia, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 270, 210));
+
+        eropa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonBenuaEropa1.png"))); // NOI18N
+        world.add(eropa, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 260, 250));
 
         asia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonBenuaAsia1.png"))); // NOI18N
-        world.add(asia, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 390, 320));
+        world.add(asia, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 390, 320));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -189,10 +196,11 @@ public class negara_bendera extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        world.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 100, 100));
+        world.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 100, 100));
 
         panelutama.add(world, "card2");
 
+        worlderopa.setOpaque(false);
         worlderopa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         eropatimur.setText("eropa timur");
@@ -237,6 +245,7 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.add(worlderopa, "card3");
 
+        worldafrika.setOpaque(false);
         worldafrika.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         afrikautara.setText("afrika utara");
@@ -281,9 +290,11 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.add(worldafrika, "card3");
 
+        worldaustralia.setOpaque(false);
         worldaustralia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelutama.add(worldaustralia, "card3");
 
+        worldasia.setOpaque(false);
         worldasia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         asiatenggara.setText("asia tengara");
@@ -328,6 +339,7 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.add(worldasia, "card3");
 
+        worldamerika.setOpaque(false);
         worldamerika.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         amerikautara.setText("amerika utara");
@@ -356,7 +368,10 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.add(worldamerika, "card3");
 
-        getContentPane().add(panelutama, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 600));
+        getContentPane().add(panelutama, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/benua.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1020, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -504,7 +519,9 @@ public class negara_bendera extends javax.swing.JFrame {
     }//GEN-LAST:event_btneropaActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+mainmenu a = new mainmenu();
+a.setVisible(true);
+this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -625,6 +642,7 @@ public class negara_bendera extends javax.swing.JFrame {
     private javax.swing.JButton eropatimur;
     private javax.swing.JButton eropautara;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private diu.swe.habib.JPanelSlider.JPanelSlider panelutama;
     private javax.swing.JPanel world;
     private javax.swing.JPanel worldafrika;

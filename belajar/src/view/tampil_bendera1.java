@@ -62,6 +62,7 @@ public void setpanel(String directory) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         btnbefore = new javax.swing.JButton();
         panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
@@ -73,7 +74,22 @@ public void setpanel(String directory) {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnnext.setText("next");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome2.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 100, -1));
+
+        btnnext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
+        btnnext.setBorderPainted(false);
+        btnnext.setContentAreaFilled(false);
+        btnnext.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext2.png"))); // NOI18N
         btnnext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnnextActionPerformed(evt);
@@ -81,7 +97,10 @@ public void setpanel(String directory) {
         });
         getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 300, -1, -1));
 
-        btnbefore.setText("before");
+        btnbefore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
+        btnbefore.setBorderPainted(false);
+        btnbefore.setContentAreaFilled(false);
+        btnbefore.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev2.png"))); // NOI18N
         btnbefore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbeforeActionPerformed(evt);
@@ -127,6 +146,12 @@ public void setpanel(String directory) {
         panelutama.nextPanel(50, panelArray[set], panelutama.left);
     }//GEN-LAST:event_btnnextActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        mainmenu a = new mainmenu();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -167,6 +192,7 @@ public void setpanel(String directory) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnbefore;
     private javax.swing.JButton btnnext;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
