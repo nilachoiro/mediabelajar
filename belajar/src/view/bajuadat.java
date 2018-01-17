@@ -127,7 +127,7 @@ public class bajuadat extends javax.swing.JFrame {
 
         grouprumah.setBorder(null);
         grouprumah.setOpaque(false);
-        getContentPane().add(grouprumah, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 450, 450));
+        getContentPane().add(grouprumah, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 450, 450));
 
         grouptitle.setBorder(null);
         grouptitle.setOpaque(false);
