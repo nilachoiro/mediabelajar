@@ -43,7 +43,6 @@ public class negara_bendera extends javax.swing.JFrame {
     private void initComponents() {
 
         panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        jLabel1 = new javax.swing.JLabel();
         world = new javax.swing.JPanel();
         btnamerika = new javax.swing.JButton();
         btnasia = new javax.swing.JButton();
@@ -56,12 +55,15 @@ public class negara_bendera extends javax.swing.JFrame {
         eropa = new javax.swing.JLabel();
         asia = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         worlderopa = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         eropatimur = new javax.swing.JButton();
         eropabarat = new javax.swing.JButton();
         eropatengah = new javax.swing.JButton();
         eropaselatan = new javax.swing.JButton();
         eropautara = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         worldafrika = new javax.swing.JPanel();
         afrikautara = new javax.swing.JButton();
         afrikatimur = new javax.swing.JButton();
@@ -87,9 +89,6 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.setBorder(null);
         panelutama.setOpaque(false);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/benua.png"))); // NOI18N
-        panelutama.add(jLabel1, "card8");
 
         world.setOpaque(false);
         world.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -206,50 +205,78 @@ public class negara_bendera extends javax.swing.JFrame {
         });
         world.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 100, 100));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/benua.png"))); // NOI18N
+        world.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1020, 770));
+
         panelutama.add(world, "card2");
 
         worlderopa.setOpaque(false);
         worlderopa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        eropatimur.setText("eropa timur");
+        jLabel4.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Eropa Utara");
+        worlderopa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 280, 100));
+
+        eropatimur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        eropatimur.setBorderPainted(false);
+        eropatimur.setContentAreaFilled(false);
+        eropatimur.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         eropatimur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eropatimurActionPerformed(evt);
             }
         });
-        worlderopa.add(eropatimur, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 230, -1, -1));
+        worlderopa.add(eropatimur, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 780, 90));
 
-        eropabarat.setText("eropa barat");
+        eropabarat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        eropabarat.setBorderPainted(false);
+        eropabarat.setContentAreaFilled(false);
+        eropabarat.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         eropabarat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eropabaratActionPerformed(evt);
             }
         });
-        worlderopa.add(eropabarat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
+        worlderopa.add(eropabarat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 750, 110));
 
-        eropatengah.setText("eropa tengah");
+        eropatengah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        eropatengah.setBorderPainted(false);
+        eropatengah.setContentAreaFilled(false);
+        eropatengah.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         eropatengah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eropatengahActionPerformed(evt);
             }
         });
-        worlderopa.add(eropatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
+        worlderopa.add(eropatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 750, 90));
 
-        eropaselatan.setText("eropa selatan");
+        eropaselatan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        eropaselatan.setBorderPainted(false);
+        eropaselatan.setContentAreaFilled(false);
+        eropaselatan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         eropaselatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eropaselatanActionPerformed(evt);
             }
         });
-        worlderopa.add(eropaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, -1, -1));
+        worlderopa.add(eropaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 730, 90));
 
-        eropautara.setText("eropa utara");
+        eropautara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        eropautara.setBorderPainted(false);
+        eropautara.setContentAreaFilled(false);
+        eropautara.setFocusPainted(false);
+        eropautara.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         eropautara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eropautaraActionPerformed(evt);
             }
         });
-        worlderopa.add(eropautara, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, -1, -1));
+        worlderopa.add(eropautara, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 750, 100));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgpilihbagiannegara.png"))); // NOI18N
+        worlderopa.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 768));
 
         panelutama.add(worlderopa, "card3");
 
@@ -662,6 +689,8 @@ this.dispose();
     private javax.swing.JButton eropautara;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private diu.swe.habib.JPanelSlider.JPanelSlider panelutama;
     private javax.swing.JPanel world;
     private javax.swing.JPanel worldafrika;

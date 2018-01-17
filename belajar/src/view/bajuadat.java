@@ -26,6 +26,7 @@ public class bajuadat extends javax.swing.JFrame {
      */
      JPanel[] panelArraybaju = new JPanel[33];
      JPanel[] panelArraytitle = new JPanel[33];
+     JPanel[] panelArrayrumah = new JPanel[33];
     int set = 0;
     AudioInputStream audioIn;
     Clip clip;
@@ -37,13 +38,20 @@ public class bajuadat extends javax.swing.JFrame {
            panelArraybaju[i].setOpaque(false);
            panelArraytitle[i]=new JPanel(new CardLayout());
            panelArraytitle[i].setOpaque(false);
+           panelArrayrumah[i]=new JPanel(new CardLayout());
+           panelArrayrumah[i].setOpaque(false);
         }
         groupbaju.setLayout(new CardLayout());
+        grouprumah.setLayout(new CardLayout());
         for (int i = 0; i < 33; i++) {
             //tambah gambar baju
-            ImageIcon image = new ImageIcon("aset\\baju\\b" + (i + 1) + ".png");
+            ImageIcon image = new ImageIcon("aset\\baju\\baju" + (i + 1) + ".png");
             JLabel imagelabel = new JLabel(image);
             panelArraybaju[i].add(imagelabel);
+            //tambah gambar rumah
+            ImageIcon image3 = new ImageIcon("aset\\baju\\rumah" + (i + 1) + ".png");
+            JLabel imagelabel3 = new JLabel(image3);
+            panelArrayrumah[i].add(imagelabel3);
             //tambah title provinsi
             ImageIcon image2 = new ImageIcon("aset\\baju\\t" + (i + 1) + ".png");
             JLabel imagelabel2 = new JLabel(image2);
@@ -51,6 +59,7 @@ public class bajuadat extends javax.swing.JFrame {
             //memasukan ke panel            
             groupbaju.add(panelArraybaju[i]);
             grouptitle.add(panelArraytitle[i]);
+            grouprumah.add(panelArrayrumah[i]);
         }
     }
 
@@ -63,10 +72,11 @@ public class bajuadat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        groupbaju = new diu.swe.habib.JPanelSlider.JPanelSlider();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        groupbaju = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        grouprumah = new diu.swe.habib.JPanelSlider.JPanelSlider();
         grouptitle = new diu.swe.habib.JPanelSlider.JPanelSlider();
         no = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -74,10 +84,6 @@ public class bajuadat extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        groupbaju.setBorder(null);
-        groupbaju.setOpaque(false);
-        getContentPane().add(groupbaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 410, 410));
 
         btnbefore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
         btnbefore.setBorderPainted(false);
@@ -89,7 +95,7 @@ public class bajuadat extends javax.swing.JFrame {
                 btnbeforeActionPerformed(evt);
             }
         });
-        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
+        getContentPane().add(btnbefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, -1));
 
         btnnext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
         btnnext.setBorderPainted(false);
@@ -101,7 +107,7 @@ public class bajuadat extends javax.swing.JFrame {
                 btnnextActionPerformed(evt);
             }
         });
-        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 360, -1, -1));
+        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 330, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -113,7 +119,15 @@ public class bajuadat extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 670, 100, -1));
+
+        groupbaju.setBorder(null);
+        groupbaju.setOpaque(false);
+        getContentPane().add(groupbaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 400, 570));
+
+        grouprumah.setBorder(null);
+        grouprumah.setOpaque(false);
+        getContentPane().add(grouprumah, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 450, 450));
 
         grouptitle.setBorder(null);
         grouptitle.setOpaque(false);
@@ -135,7 +149,8 @@ public class bajuadat extends javax.swing.JFrame {
             set=32;
         }
         groupbaju.nextPanel(25, panelArraybaju[set], groupbaju.right);
-        grouptitle.nextPanel(25, panelArraytitle[set], groupbaju.right);
+        grouptitle.nextPanel(25, panelArraytitle[set], grouptitle.right);
+        grouprumah.nextPanel(25, panelArrayrumah[set], grouprumah.right);
         Musik_Play();
         int urut=set+1;
         no.setText(""+urut);
@@ -147,7 +162,8 @@ public class bajuadat extends javax.swing.JFrame {
             set=0;
         }
         groupbaju.nextPanel(25, panelArraybaju[set], groupbaju.left);
-        grouptitle.nextPanel(25, panelArraytitle[set], groupbaju.left);
+        grouptitle.nextPanel(25, panelArraytitle[set], grouptitle.left);
+        grouprumah.nextPanel(25, panelArrayrumah[set], grouprumah.left);
         Musik_Play();
         int urut=set+1;
         no.setText(""+urut);
@@ -210,6 +226,7 @@ public void Musik_Play() {
     private javax.swing.JButton btnbefore;
     private javax.swing.JButton btnnext;
     private diu.swe.habib.JPanelSlider.JPanelSlider groupbaju;
+    private diu.swe.habib.JPanelSlider.JPanelSlider grouprumah;
     private diu.swe.habib.JPanelSlider.JPanelSlider grouptitle;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

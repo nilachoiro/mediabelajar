@@ -602,10 +602,19 @@ public class mengenal_huruf extends javax.swing.JFrame {
        
     public void play_sound_huruf(char huruf) {
         try {
+            Clip[] cliparrray = new Clip[2];
             audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
             clip = AudioSystem.getClip();
             clip.open(audioIn);
-            clip.loop(0);
+cliparrray[0]=clip;
+                audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\benda" + huruf + ".wav"));
+            clip = AudioSystem.getClip();
+            clip.open(audioIn);
+cliparrray[1]=clip;
+            for (int i = 0; i < cliparrray.length; i++) {
+                cliparrray[i].start();
+                
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
         }
