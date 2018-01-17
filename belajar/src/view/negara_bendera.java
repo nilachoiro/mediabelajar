@@ -6,10 +6,15 @@
 package view;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -528,15 +533,29 @@ this.dispose();
      * @param args the command line arguments
      */
     public void soundbagianbenua(String nama) {
+//        try {
+//            audioIn = AudioSystem.getAudioInputStream(new File("aset/bendera_jpg/sound_benua/" + nama + ".wav"));
+//
+//            clip = AudioSystem.getClip();
+//            clip.open(audioIn);
+//            clip.loop(0);
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+//        }
+        
+        /////////////////
         try {
-            audioIn = AudioSystem.getAudioInputStream(new File("aset/bendera_jpg/sound_benua/" + nama + ".wav"));
-
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.loop(0);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
-        }
+			FileInputStream fileInputStream = new FileInputStream("aset/bendera_jpg/sound_benua/" + nama + ".mp3");
+			Player player = new Player(fileInputStream);
+			System.out.println("Song is playing...");
+			player.play();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JavaLayerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     public void setpanelafrika(String lokasi) {

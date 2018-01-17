@@ -44,6 +44,7 @@ public class angka extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        clGlossyPanel1 = new GlossyPanel.ClGlossyPanel();
         jButton1 = new javax.swing.JButton();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
@@ -269,7 +270,7 @@ public class angka extends javax.swing.JFrame {
                 c10ActionPerformed(evt);
             }
         });
-        group2.add(c10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 200, 220));
+        group2.add(c10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 210, 200));
 
         c11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c11.png"))); // NOI18N
         c11.setBorderPainted(false);
@@ -281,7 +282,7 @@ public class angka extends javax.swing.JFrame {
                 c11ActionPerformed(evt);
             }
         });
-        group2.add(c11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 200, 220));
+        group2.add(c11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 200, 190));
 
         c12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c12.png"))); // NOI18N
         c12.setBorderPainted(false);
@@ -293,7 +294,7 @@ public class angka extends javax.swing.JFrame {
                 c12ActionPerformed(evt);
             }
         });
-        group2.add(c12, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 200, 220));
+        group2.add(c12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 200, 220));
 
         c13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c13.png"))); // NOI18N
         c13.setBorderPainted(false);
@@ -305,7 +306,7 @@ public class angka extends javax.swing.JFrame {
                 c13ActionPerformed(evt);
             }
         });
-        group2.add(c13, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, -10, 200, 250));
+        group2.add(c13, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 200, 250));
 
         c14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c14.png"))); // NOI18N
         c14.setBorderPainted(false);
@@ -317,7 +318,7 @@ public class angka extends javax.swing.JFrame {
                 c14ActionPerformed(evt);
             }
         });
-        group2.add(c14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, 240));
+        group2.add(c14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 220, 240));
 
         c15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c15.png"))); // NOI18N
         c15.setBorderPainted(false);
@@ -329,7 +330,7 @@ public class angka extends javax.swing.JFrame {
                 c15ActionPerformed(evt);
             }
         });
-        group2.add(c15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 210, 210));
+        group2.add(c15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 210, 210));
 
         c16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c16.png"))); // NOI18N
         c16.setBorderPainted(false);
@@ -341,7 +342,7 @@ public class angka extends javax.swing.JFrame {
                 c16ActionPerformed(evt);
             }
         });
-        group2.add(c16, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 200, 250));
+        group2.add(c16, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, 200, 250));
 
         c17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c17.png"))); // NOI18N
         c17.setBorderPainted(false);
@@ -353,7 +354,7 @@ public class angka extends javax.swing.JFrame {
                 c17ActionPerformed(evt);
             }
         });
-        group2.add(c17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 200, 200));
+        group2.add(c17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 200, 200));
 
         c18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c18.png"))); // NOI18N
         c18.setBorderPainted(false);
@@ -365,7 +366,7 @@ public class angka extends javax.swing.JFrame {
                 c18ActionPerformed(evt);
             }
         });
-        group2.add(c18, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 210, 250));
+        group2.add(c18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 210, 250));
 
         c19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c19.png"))); // NOI18N
         c19.setBorderPainted(false);
@@ -377,7 +378,7 @@ public class angka extends javax.swing.JFrame {
                 c19ActionPerformed(evt);
             }
         });
-        group2.add(c19, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 210, 220));
+        group2.add(c19, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 210, 220));
 
         grouphuruf.add(group2, "card3");
 
@@ -720,6 +721,10 @@ public class angka extends javax.swing.JFrame {
         int urut=set+1;
     }//GEN-LAST:event_btnbeforeActionPerformed
  public void play_sound_angka(String angka) {
+     popup_angka a = new popup_angka(angka);
+     a.seticon(angka);
+     a.setVisible(true);
+     
         try {
             audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_angka\\" + angka + ".wav"));
             clip = AudioSystem.getClip();
@@ -800,6 +805,7 @@ public class angka extends javax.swing.JFrame {
     private javax.swing.JButton c7;
     private javax.swing.JButton c8;
     private javax.swing.JButton c9;
+    private GlossyPanel.ClGlossyPanel clGlossyPanel1;
     private javax.swing.JPanel group1;
     private javax.swing.JPanel group2;
     private javax.swing.JPanel group3;
