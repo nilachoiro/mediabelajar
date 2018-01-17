@@ -10,6 +10,11 @@ package pisah;
  * @author acer
  */
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 public class Pisah {
 
     /**
@@ -45,9 +50,35 @@ public class Pisah {
 //            
 //        }
 //        System.out.println(array.length);
-String directory = "aset\\bendera_jpg\\afrika\\afrikautara";
-generatepanel a = new generatepanel(directory);
-a.setVisible(true);
+
+////cek file suatu directory
+//String directory = "aset\\bendera_jpg\\afrika\\afrikautara";
+//generatepanel a = new generatepanel(directory);
+//a.setVisible(true);
+    
+    try {
+			FileInputStream fileInputStream = new FileInputStream("song.mp3");
+			Player player = new Player(fileInputStream);
+			System.out.println("Song is playing...");
+			
+                        while (true){
+                            System.out.println("pilih setting");
+                            Scanner input = new Scanner(System.in);
+                            String pil=input.next();
+                            if (pil.equalsIgnoreCase("p")) {
+                                player.play();
+                            }
+                            if (pil.equalsIgnoreCase("s")){
+                           player.play(0);
+                            }
+                        }
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JavaLayerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
 }
