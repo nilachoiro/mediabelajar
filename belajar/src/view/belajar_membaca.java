@@ -15,15 +15,16 @@ import javax.swing.JOptionPane;
  *
  * @author acer
  */
-public class huruf extends javax.swing.JFrame {
+public class belajar_membaca extends javax.swing.JFrame {
 
     /**
-     * Creates new form huruf
+     * Creates new form mengenal_huruf
      */
     AudioInputStream audioIn;
     Clip clip;
+    String katainput = "";
 
-    public huruf() {
+    public belajar_membaca() {
         initComponents();
         btnbefore.setVisible(false);
     }
@@ -70,6 +71,9 @@ public class huruf extends javax.swing.JFrame {
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        panelkata = new javax.swing.JLabel();
+        play = new javax.swing.JButton();
+        reset = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -444,7 +448,30 @@ public class huruf extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background huruf.png"))); // NOI18N
+        panelkata.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
+        panelkata.setForeground(new java.awt.Color(255, 255, 255));
+        panelkata.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        panelkata.setText("abcd");
+        getContentPane().add(panelkata, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 610, 70));
+
+        play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound1.png"))); // NOI18N
+        play.setBorderPainted(false);
+        play.setContentAreaFilled(false);
+        play.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playActionPerformed(evt);
+            }
+        });
+        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 40, 100, 100));
+
+        reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetActionPerformed(evt);
+            }
+        });
+        getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 100, 100));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bghuruf.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
@@ -472,134 +499,175 @@ public class huruf extends javax.swing.JFrame {
 
     private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
         char huruf = 'a';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_aActionPerformed
 
     private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
         char huruf = 'b';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_bActionPerformed
 
     private void cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cActionPerformed
         char huruf = 'c';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_cActionPerformed
 
     private void dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dActionPerformed
         char huruf = 'd';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_dActionPerformed
 
     private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
         char huruf = 'e';
+        setpanelkata(huruf);
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_eActionPerformed
 
     private void fActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fActionPerformed
         char huruf = 'f';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_fActionPerformed
 
     private void gActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gActionPerformed
         char huruf = 'g';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_gActionPerformed
 
     private void hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hActionPerformed
         char huruf = 'h';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_hActionPerformed
 
     private void iActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iActionPerformed
         char huruf = 'i';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_iActionPerformed
 
     private void jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jActionPerformed
         char huruf = 'j';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_jActionPerformed
 
     private void kActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kActionPerformed
         char huruf = 'k';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_kActionPerformed
 
     private void lActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lActionPerformed
         char huruf = 'l';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_lActionPerformed
 
     private void mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mActionPerformed
         char huruf = 'm';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_mActionPerformed
 
     private void nActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nActionPerformed
         char huruf = 'n';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_nActionPerformed
 
     private void oActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oActionPerformed
         char huruf = 'o';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_oActionPerformed
 
     private void pActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pActionPerformed
         char huruf = 'p';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_pActionPerformed
 
     private void qActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qActionPerformed
         char huruf = 'q';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_qActionPerformed
 
     private void rActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rActionPerformed
         char huruf = 'r';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_rActionPerformed
 
     private void sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sActionPerformed
         char huruf = 's';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_sActionPerformed
 
     private void tActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tActionPerformed
         char huruf = 't';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_tActionPerformed
 
     private void uActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uActionPerformed
         char huruf = 'u';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_uActionPerformed
 
     private void vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vActionPerformed
         char huruf = 'v';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_vActionPerformed
 
     private void wActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wActionPerformed
         char huruf = 'w';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_wActionPerformed
 
     private void xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xActionPerformed
         char huruf = 'x';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_xActionPerformed
 
     private void yActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yActionPerformed
-       char huruf = 'y';
+        char huruf = 'y';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_yActionPerformed
 
     private void zActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zActionPerformed
         char huruf = 'z';
+        setpanelkata(huruf);
         play_sound_huruf(huruf);
     }//GEN-LAST:event_zActionPerformed
-       
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        panelkata.setText("");
+        katainput="";
+    }//GEN-LAST:event_resetActionPerformed
+
+    private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
+        TextToSpeechConvertor tts = new TextToSpeechConvertor();
+        tts.speak(katainput);
+    }//GEN-LAST:event_playActionPerformed
+    public void setpanelkata(char huruf) {
+        katainput += huruf;
+        panelkata.setText(katainput);
+    }
+
     public void play_sound_huruf(char huruf) {
         try {
             audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
@@ -628,20 +696,23 @@ public class huruf extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(huruf.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(belajar_membaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(huruf.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(belajar_membaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(huruf.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(belajar_membaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(huruf.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(belajar_membaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new huruf().setVisible(true);
+                new belajar_membaca().setVisible(true);
             }
         });
     }
@@ -670,8 +741,11 @@ public class huruf extends javax.swing.JFrame {
     private javax.swing.JButton n;
     private javax.swing.JButton o;
     private javax.swing.JButton p;
+    private javax.swing.JLabel panelkata;
+    private javax.swing.JButton play;
     private javax.swing.JButton q;
     private javax.swing.JButton r;
+    private javax.swing.JButton reset;
     private javax.swing.JButton s;
     private javax.swing.JPanel show;
     private javax.swing.JButton t;

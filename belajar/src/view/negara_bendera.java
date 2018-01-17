@@ -43,6 +43,7 @@ public class negara_bendera extends javax.swing.JFrame {
     private void initComponents() {
 
         panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        jLabel1 = new javax.swing.JLabel();
         world = new javax.swing.JPanel();
         btnamerika = new javax.swing.JButton();
         btnasia = new javax.swing.JButton();
@@ -78,7 +79,6 @@ public class negara_bendera extends javax.swing.JFrame {
         amerikautara = new javax.swing.JButton();
         amerikatengah = new javax.swing.JButton();
         amerikaselatan = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -87,6 +87,9 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.setBorder(null);
         panelutama.setOpaque(false);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/benua.png"))); // NOI18N
+        panelutama.add(jLabel1, "card8");
 
         world.setOpaque(false);
         world.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -374,9 +377,6 @@ public class negara_bendera extends javax.swing.JFrame {
         panelutama.add(worldamerika, "card3");
 
         getContentPane().add(panelutama, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/benua.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1020, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

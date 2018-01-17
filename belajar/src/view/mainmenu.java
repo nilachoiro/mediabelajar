@@ -116,7 +116,7 @@ public class mainmenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void abcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abcActionPerformed
-        huruf a = new huruf();
+        pilih_huruf a = new pilih_huruf();
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_abcActionPerformed
