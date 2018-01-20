@@ -591,7 +591,7 @@ public class mengenal_huruf extends javax.swing.JFrame {
     }//GEN-LAST:event_xActionPerformed
 
     private void yActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yActionPerformed
-       char huruf = 'y';
+        char huruf = 'y';
         play_sound_huruf(huruf);
     }//GEN-LAST:event_yActionPerformed
 
@@ -599,22 +599,19 @@ public class mengenal_huruf extends javax.swing.JFrame {
         char huruf = 'z';
         play_sound_huruf(huruf);
     }//GEN-LAST:event_zActionPerformed
-       
+
     public void play_sound_huruf(char huruf) {
         try {
             Clip[] cliparrray = new Clip[2];
             audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
             clip = AudioSystem.getClip();
             clip.open(audioIn);
-cliparrray[0]=clip;
-                audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\benda" + huruf + ".wav"));
+            cliparrray[0] = clip;
+            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\benda" + huruf + ".wav"));
             clip = AudioSystem.getClip();
             clip.open(audioIn);
-cliparrray[1]=clip;
-            for (int i = 0; i < cliparrray.length; i++) {
-                cliparrray[i].start();
-                
-            }
+            cliparrray[1] = clip;
+            cliparrray[0].start();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
         }

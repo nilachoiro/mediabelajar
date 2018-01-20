@@ -7,6 +7,9 @@ package view;
 
 import java.awt.CardLayout;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sound.sampled.AudioInputStream;
@@ -16,6 +19,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -221,26 +226,26 @@ public void setpanel(String directory) {
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
     public void Musik_Play() {
-        try {
-            audioIn = AudioSystem.getAudioInputStream(new File(lokasi + "/" + (set + 1) + ".wav"));
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.loop(0);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
-        }
-
-// try {
-//			FileInputStream fileInputStream = new FileInputStream(lokasi + "/" + (set + 1) + ".mp3");
-//			Player player = new Player(fileInputStream);
-//			System.out.println("Song is playing...");
-//			player.play();
-//		}catch (JavaLayerException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (FileNotFoundException ex) {
-//            Logger.getLogger(tampil_bendera.class.getName()).log(Level.SEVERE, null, ex);
+//        try {
+//            audioIn = AudioSystem.getAudioInputStream(new File(lokasi + "/" + (set + 1) + ".wav"));
+//            clip = AudioSystem.getClip();
+//            clip.open(audioIn);
+//            clip.loop(0);
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
 //        }
+ try {
+			FileInputStream fileInputStream = new FileInputStream(lokasi + "/" + (set + 1) + ".mp3");
+			Player player = new Player(fileInputStream);
+			System.out.println("Song is playing...");
+			player.play();
+		}catch (JavaLayerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (FileNotFoundException ex) {
+            Logger.getLogger(tampil_bendera.class.getName()).log(Level.SEVERE, null, ex);
+        }
+ 
         // TODO Auto-generated catch block
         
     }

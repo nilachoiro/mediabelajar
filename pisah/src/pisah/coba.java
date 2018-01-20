@@ -41,6 +41,7 @@ public class coba extends javax.swing.JFrame {
         imageTransition = new open.usu.swing.EImageTransition();
         panelutama = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        clCircularProgress1 = new CircularProgressbar.ClCircularProgress();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -69,15 +70,32 @@ public class coba extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(51, 102, 255));
 
+        javax.swing.GroupLayout clCircularProgress1Layout = new javax.swing.GroupLayout(clCircularProgress1);
+        clCircularProgress1.setLayout(clCircularProgress1Layout);
+        clCircularProgress1Layout.setHorizontalGroup(
+            clCircularProgress1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 202, Short.MAX_VALUE)
+        );
+        clCircularProgress1Layout.setVerticalGroup(
+            clCircularProgress1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 186, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(clCircularProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(clCircularProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         panelutama.add(jPanel3, "card4");
@@ -126,15 +144,7 @@ public class coba extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-        GraphicUtilities.getBufferedImageFromComponent(panelutama, image);
-    
-    imageTransition.setImage(image);
-    imageTransition.setPointTransition(GraphicUtilities.getLocationForComponent(panelutama, imageTransition));
-    imageTransition.startTransition(500);
-    
-   ((CardLayout) panelutama.getLayout()).show(panelutama, evt.getActionCommand());
-   imageTransition.setImageTransition(ImageTransition.BOX_OUT);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -174,6 +184,7 @@ public class coba extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private CircularProgressbar.ClCircularProgress clCircularProgress1;
     private open.usu.swing.EGlassPane glassPane;
     private open.usu.swing.EImageTransition imageTransition;
     private javax.swing.JButton jButton1;

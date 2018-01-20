@@ -12,9 +12,13 @@ package pisah;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
+
 public class Pisah {
 
     /**
@@ -55,30 +59,58 @@ public class Pisah {
 //String directory = "aset\\bendera_jpg\\afrika\\afrikautara";
 //generatepanel a = new generatepanel(directory);
 //a.setVisible(true);
-    
-    try {
-			FileInputStream fileInputStream = new FileInputStream("song.mp3");
-			Player player = new Player(fileInputStream);
-			System.out.println("Song is playing...");
-			
-                        while (true){
-                            System.out.println("pilih setting");
-                            Scanner input = new Scanner(System.in);
-                            String pil=input.next();
-                            if (pil.equalsIgnoreCase("p")) {
-                                player.play();
-                            }
-                            if (pil.equalsIgnoreCase("s")){
-                           player.play(0);
-                            }
-                        }
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JavaLayerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//    
+//    try {
+//			FileInputStream fileInputStream = new FileInputStream("song.mp3");
+//			Player player = new Player(fileInputStream);
+//			System.out.println("Song is playing...");
+//			
+//                        while (true){
+//                            System.out.println("pilih setting");
+//                            Scanner input = new Scanner(System.in);
+//                            String pil=input.next();
+//                            if (pil.equalsIgnoreCase("p")) {
+//                                player.play();
+//                            }
+//                            if (pil.equalsIgnoreCase("s")){
+//                           player.play(0);
+//                            }
+//                        }
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (JavaLayerException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+
+//        String asli = "123456789123";
+//        System.out.println("asli = " + asli);
+//        StringBuilder rubah = new StringBuilder(asli);
+//        System.out.println("masukan angka");
+//        Scanner input = new Scanner(System.in);
+//        String get = input.next();
+//        char[] getarray = get.toCharArray();
+//        int count = 0;
+//        int countarray=getarray.length-1;
+//        for (int i = asli.length()-1;count<getarray.length; i--) {
+//            rubah.setCharAt(i, getarray[countarray]);
+//            System.out.println("i = "+i);
+//            System.out.println("count = "+count);
+//            countarray--;
+//            count++;
+//        }
+//        System.out.println("rubah = " + rubah);
+        String getno = gettanggal()+"000000";
+        System.out.println("get "+getno);
+        String notr=getno.substring(6, 12);
+        System.out.println("no tr"+notr);
     }
     
+ public static String gettanggal() {
+        DateFormat dateformat = new SimpleDateFormat("yyMMdd");
+        Date date = new Date();
+        return dateformat.format(date);
+    }
 }
