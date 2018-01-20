@@ -44,7 +44,6 @@ public class angka extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        clGlossyPanel1 = new GlossyPanel.ClGlossyPanel();
         jButton1 = new javax.swing.JButton();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
@@ -805,7 +804,6 @@ public class angka extends javax.swing.JFrame {
     private javax.swing.JButton c7;
     private javax.swing.JButton c8;
     private javax.swing.JButton c9;
-    private GlossyPanel.ClGlossyPanel clGlossyPanel1;
     private javax.swing.JPanel group1;
     private javax.swing.JPanel group2;
     private javax.swing.JPanel group3;
