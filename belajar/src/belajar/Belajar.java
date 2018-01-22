@@ -6,11 +6,6 @@
 package belajar;
 
 import view.tampilanawal;
-import java.io.File;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,10 +17,8 @@ public class Belajar {
      * @param args the command line arguments
      */
     
-
     public static void main(String[] args) {
         tampilanawal b = new tampilanawal();
         b.setVisible(true);
     }
-    
 }

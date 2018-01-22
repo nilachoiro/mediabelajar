@@ -21,14 +21,15 @@ public class popup_angka extends javax.swing.JFrame {
      * Creates new form popup_huruf
      */
     Timer mytimer = new Timer();
-    int detik=0;
+    int detik = 0;
     int getdetik = -1;
-boolean tampil=false;
+    boolean tampil = false;
+
     public popup_angka(String angka) {
         initComponents();
         this.setLocationRelativeTo(this);
         setBackground(new Color(0, 0, 0, 0));
-start();
+        start();
     }
 
     public void seticon(String angka) {
@@ -67,10 +68,10 @@ TimerTask cek = new TimerTask() {
         public void run() {
             detik++;
             if (!tampil) {
-                getdetik=detik+1;
-                tampil=true;
+                getdetik = detik + 1;
+                tampil = true;
             }
-            if (getdetik==detik) {
+            if (getdetik == detik) {
                 dispose();;
                 cek.cancel();
             }

@@ -39,6 +39,7 @@ public class mainmenu extends javax.swing.JFrame {
         angka = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         exit = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,7 +56,7 @@ public class mainmenu extends javax.swing.JFrame {
                 abcActionPerformed(evt);
             }
         });
-        getContentPane().add(abc, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 230, 230));
+        getContentPane().add(abc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 230, 230));
 
         bendera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibendera.png"))); // NOI18N
         bendera.setBorderPainted(false);
@@ -67,7 +68,7 @@ public class mainmenu extends javax.swing.JFrame {
                 benderaActionPerformed(evt);
             }
         });
-        getContentPane().add(bendera, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 250, 240));
+        getContentPane().add(bendera, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 190, 250, 240));
 
         baju.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsibajuadat.png"))); // NOI18N
         baju.setText("t");
@@ -80,7 +81,7 @@ public class mainmenu extends javax.swing.JFrame {
                 bajuActionPerformed(evt);
             }
         });
-        getContentPane().add(baju, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 240, 250));
+        getContentPane().add(baju, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 240, 250));
 
         angka.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsiangka.png"))); // NOI18N
         angka.setBorderPainted(false);
@@ -92,7 +93,7 @@ public class mainmenu extends javax.swing.JFrame {
                 angkaActionPerformed(evt);
             }
         });
-        getContentPane().add(angka, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 260, 260));
+        getContentPane().add(angka, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, 260, 260));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/panda.gif"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 240, 240));
@@ -108,6 +109,14 @@ public class mainmenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, 110, 110));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 190, 160));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background menu.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
@@ -142,6 +151,12 @@ public class mainmenu extends javax.swing.JFrame {
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        pilih_warna a = new pilih_warna();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,6 +200,7 @@ public class mainmenu extends javax.swing.JFrame {
     private javax.swing.JButton baju;
     private javax.swing.JButton bendera;
     private javax.swing.JButton exit;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -58,6 +58,10 @@ public class negara_bendera extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         worlderopa = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         eropatimur = new javax.swing.JButton();
         eropabarat = new javax.swing.JButton();
         eropatengah = new javax.swing.JButton();
@@ -65,22 +69,38 @@ public class negara_bendera extends javax.swing.JFrame {
         eropautara = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         worldafrika = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         afrikautara = new javax.swing.JButton();
         afrikatimur = new javax.swing.JButton();
         afrikabarat = new javax.swing.JButton();
         afrikatengah = new javax.swing.JButton();
         afrikaselatan = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         worldaustralia = new javax.swing.JPanel();
         worldasia = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         asiatenggara = new javax.swing.JButton();
         asiatimur = new javax.swing.JButton();
         asiabarat = new javax.swing.JButton();
         asiatengah = new javax.swing.JButton();
         asiaselatan = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
         worldamerika = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         amerikautara = new javax.swing.JButton();
         amerikatengah = new javax.swing.JButton();
         amerikaselatan = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -216,8 +236,32 @@ public class negara_bendera extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Eropa Utara");
-        worlderopa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 280, 100));
+        jLabel4.setText("Eropa Barat");
+        worlderopa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 280, 100));
+
+        jLabel5.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Eropa Tengah");
+        worlderopa.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 340, 100));
+
+        jLabel6.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Eropa Selatan");
+        worlderopa.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 340, 100));
+
+        jLabel7.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Eropa Timur");
+        worlderopa.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 310, 100));
+
+        jLabel8.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Eropa Utara");
+        worlderopa.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 280, 100));
 
         eropatimur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
         eropatimur.setBorderPainted(false);
@@ -283,45 +327,101 @@ public class negara_bendera extends javax.swing.JFrame {
         worldafrika.setOpaque(false);
         worldafrika.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        afrikautara.setText("afrika utara");
+        jLabel9.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Afrika Utara");
+        worldafrika.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 280, 100));
+
+        jLabel10.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Afrika Timur");
+        worldafrika.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 570, 310, 100));
+
+        jLabel11.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Afrika Selatan");
+        worldafrika.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 340, 100));
+
+        jLabel12.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Afrika Barat");
+        worldafrika.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 340, 100));
+
+        jLabel13.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Afrika Tengah");
+        worldafrika.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 330, 100));
+
+        afrikautara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        afrikautara.setToolTipText("");
+        afrikautara.setBorderPainted(false);
+        afrikautara.setContentAreaFilled(false);
+        afrikautara.setFocusPainted(false);
+        afrikautara.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         afrikautara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 afrikautaraActionPerformed(evt);
             }
         });
-        worldafrika.add(afrikautara, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, -1, -1));
+        worldafrika.add(afrikautara, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 710, 130));
 
-        afrikatimur.setText("afrika timur");
+        afrikatimur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        afrikatimur.setBorderPainted(false);
+        afrikatimur.setContentAreaFilled(false);
+        afrikatimur.setFocusPainted(false);
+        afrikatimur.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         afrikatimur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 afrikatimurActionPerformed(evt);
             }
         });
-        worldafrika.add(afrikatimur, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 230, -1, -1));
+        worldafrika.add(afrikatimur, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, -1, -1));
 
-        afrikabarat.setText("afrika barat");
+        afrikabarat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        afrikabarat.setBorderPainted(false);
+        afrikabarat.setContentAreaFilled(false);
+        afrikabarat.setDefaultCapable(false);
+        afrikabarat.setFocusPainted(false);
+        afrikabarat.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         afrikabarat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 afrikabaratActionPerformed(evt);
             }
         });
-        worldafrika.add(afrikabarat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
+        worldafrika.add(afrikabarat, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
 
-        afrikatengah.setText("afrika tengah");
+        afrikatengah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        afrikatengah.setBorderPainted(false);
+        afrikatengah.setContentAreaFilled(false);
+        afrikatengah.setFocusPainted(false);
+        afrikatengah.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         afrikatengah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 afrikatengahActionPerformed(evt);
             }
         });
-        worldafrika.add(afrikatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
+        worldafrika.add(afrikatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, -1, -1));
 
-        afrikaselatan.setText("afrika selatan");
+        afrikaselatan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        afrikaselatan.setBorderPainted(false);
+        afrikaselatan.setContentAreaFilled(false);
+        afrikaselatan.setDefaultCapable(false);
+        afrikaselatan.setFocusPainted(false);
+        afrikaselatan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         afrikaselatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 afrikaselatanActionPerformed(evt);
             }
         });
-        worldafrika.add(afrikaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, -1, -1));
+        worldafrika.add(afrikaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgpilihbagiannegara.png"))); // NOI18N
+        worldafrika.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 768));
 
         panelutama.add(worldafrika, "card3");
 
@@ -332,74 +432,161 @@ public class negara_bendera extends javax.swing.JFrame {
         worldasia.setOpaque(false);
         worldasia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        asiatenggara.setText("asia tengara");
+        jLabel14.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Asia Timur");
+        worldasia.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 280, 100));
+
+        jLabel15.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Asia Selatan");
+        worldasia.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 340, 100));
+
+        jLabel16.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Asia Tengara");
+        worldasia.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 340, 100));
+
+        jLabel17.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Asia Barat");
+        worldasia.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 610, 310, 100));
+
+        jLabel18.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Asia Tengah");
+        worldasia.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 280, 100));
+
+        asiatenggara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        asiatenggara.setBorderPainted(false);
+        asiatenggara.setContentAreaFilled(false);
+        asiatenggara.setFocusPainted(false);
+        asiatenggara.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         asiatenggara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asiatenggaraActionPerformed(evt);
             }
         });
-        worldasia.add(asiatenggara, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, -1, -1));
+        worldasia.add(asiatenggara, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
 
-        asiatimur.setText("asia timur");
+        asiatimur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        asiatimur.setToolTipText("");
+        asiatimur.setBorderPainted(false);
+        asiatimur.setContentAreaFilled(false);
+        asiatimur.setFocusPainted(false);
+        asiatimur.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         asiatimur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asiatimurActionPerformed(evt);
             }
         });
-        worldasia.add(asiatimur, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, -1, -1));
+        worldasia.add(asiatimur, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
 
-        asiabarat.setText("asia barat");
+        asiabarat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        asiabarat.setBorderPainted(false);
+        asiabarat.setContentAreaFilled(false);
+        asiabarat.setFocusPainted(false);
+        asiabarat.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         asiabarat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asiabaratActionPerformed(evt);
             }
         });
-        worldasia.add(asiabarat, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
+        worldasia.add(asiabarat, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 610, -1, -1));
 
-        asiatengah.setText("asia tengah");
+        asiatengah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        asiatengah.setBorderPainted(false);
+        asiatengah.setContentAreaFilled(false);
+        asiatengah.setFocusPainted(false);
+        asiatengah.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         asiatengah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asiatengahActionPerformed(evt);
             }
         });
-        worldasia.add(asiatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, -1, -1));
+        worldasia.add(asiatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
-        asiaselatan.setText("asia selatan");
+        asiaselatan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        asiaselatan.setBorderPainted(false);
+        asiaselatan.setContentAreaFilled(false);
+        asiaselatan.setFocusPainted(false);
+        asiaselatan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         asiaselatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asiaselatanActionPerformed(evt);
             }
         });
-        worldasia.add(asiaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, -1, -1));
+        worldasia.add(asiaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgpilihbagiannegara.png"))); // NOI18N
+        worldasia.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 768));
 
         panelutama.add(worldasia, "card3");
 
         worldamerika.setOpaque(false);
         worldamerika.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        amerikautara.setText("amerika utara");
+        jLabel20.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("Amerika Tengah");
+        worldamerika.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 410, 100));
+
+        jLabel21.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Amerika Selatan");
+        worldamerika.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 390, 100));
+
+        jLabel24.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("Amerika Utara");
+        worldamerika.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 360, 100));
+
+        amerikautara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        amerikautara.setBorderPainted(false);
+        amerikautara.setContentAreaFilled(false);
+        amerikautara.setFocusPainted(false);
+        amerikautara.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         amerikautara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 amerikautaraActionPerformed(evt);
             }
         });
-        worldamerika.add(amerikautara, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, -1, -1));
+        worldamerika.add(amerikautara, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
 
-        amerikatengah.setText("amerika tengah");
+        amerikatengah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        amerikatengah.setBorderPainted(false);
+        amerikatengah.setContentAreaFilled(false);
+        amerikatengah.setFocusPainted(false);
+        amerikatengah.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         amerikatengah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 amerikatengahActionPerformed(evt);
             }
         });
-        worldamerika.add(amerikatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
+        worldamerika.add(amerikatengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
 
-        amerikaselatan.setText("amerika selatan");
+        amerikaselatan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu1.png"))); // NOI18N
+        amerikaselatan.setBorderPainted(false);
+        amerikaselatan.setContentAreaFilled(false);
+        amerikaselatan.setFocusPainted(false);
+        amerikaselatan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kayu2.png"))); // NOI18N
         amerikaselatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 amerikaselatanActionPerformed(evt);
             }
         });
-        worldamerika.add(amerikaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, -1, -1));
+        worldamerika.add(amerikaselatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, -1, -1));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgpilihbagiannegara.png"))); // NOI18N
+        worldamerika.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 768));
 
         panelutama.add(worldamerika, "card3");
 
@@ -551,43 +738,45 @@ public class negara_bendera extends javax.swing.JFrame {
     }//GEN-LAST:event_btneropaActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-mainmenu a = new mainmenu();
-a.setVisible(true);
-this.dispose();
+        mainmenu a = new mainmenu();
+        a.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public void soundbagianbenua(String nama) {
-//        try {
-//            audioIn = AudioSystem.getAudioInputStream(new File("aset/bendera_jpg/sound_benua/" + nama + ".wav"));
-//
-//            clip = AudioSystem.getClip();
-//            clip.open(audioIn);
-//            clip.loop(0);
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
-//        }
-        
-        /////////////////
-        try {
-			FileInputStream fileInputStream = new FileInputStream("aset/bendera_jpg/sound_benua/" + nama + ".mp3");
-			Player player = new Player(fileInputStream);
-			System.out.println("Song is playing...");
-			player.play();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JavaLayerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        play a = new play();
+        a.setnama(nama);
+        a.start();
+    }
+
+    class play extends Thread {
+
+        String nama;
+
+        public void setnama(String nama) {
+            this.nama = nama;
+        }
+
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset/bendera_jpg/sound_benua/" + nama + ".mp3");
+                Player player = new Player(fileInputStream);
+                System.out.println("Song is playing...");
+                player.play();
+                stop();
+                System.out.println("aaaaa");
+            } catch (FileNotFoundException e) {
+            } catch (JavaLayerException e) {
+            }
+        }
     }
 
     public void setpanelafrika(String lokasi) {
         String directory = "aset\\bendera_jpg\\afrika\\" + lokasi;
-        
+
         soundbagianbenua(lokasi);
         tampil_bendera a = new tampil_bendera(directory);
         a.setVisible(true);
@@ -689,8 +878,28 @@ this.dispose();
     private javax.swing.JButton eropautara;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private diu.swe.habib.JPanelSlider.JPanelSlider panelutama;
     private javax.swing.JPanel world;
     private javax.swing.JPanel worldafrika;

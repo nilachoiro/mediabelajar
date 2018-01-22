@@ -28,17 +28,18 @@ public class popup_huruf extends javax.swing.JFrame {
      * Creates new form popup_huruf
      */
     Timer mytimer = new Timer();
-    int detik=0;
+    int detik = 0;
     int getdetik = -1;
-AudioInputStream audioIn;
+    AudioInputStream audioIn;
     Clip clip;
     char huruf;
+
     public popup_huruf(char huruf) {
         initComponents();
         this.setLocationRelativeTo(this);
         setBackground(new Color(0, 0, 0, 0));
         seticon(huruf);
-        this.huruf=huruf;
+        this.huruf = huruf;
         start();
     }
 
@@ -48,21 +49,21 @@ AudioInputStream audioIn;
     }
 
     public void start() {
-//        mainMusik(musikmain);
-        //sehari = 5 detik,perawatan = 15 detik
         mytimer.schedule(cek, 1000, 500);//detik asli
     }
-public void play_sound_huruf(char huruf) {
+
+    public void play_sound_huruf(char huruf) {
         try {
-            
+
             audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\benda" + huruf + ".wav"));
             clip = AudioSystem.getClip();
             clip.open(audioIn);
-           clip.start();
+            clip.start();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -87,11 +88,11 @@ TimerTask cek = new TimerTask() {
         @Override
         public void run() {
             detik++;
-            System.out.println("detik = "+detik);
-            if (detik==1) {
-            play_sound_huruf(huruf);
+            System.out.println("detik = " + detik);
+            if (detik == 1) {
+                play_sound_huruf(huruf);
             }
-            if (detik==4) {
+            if (detik == 4) {
                 dispose();;
                 cek.cancel();
             }

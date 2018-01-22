@@ -5,11 +5,15 @@
  */
 package view;
 
-import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -601,22 +605,30 @@ public class mengenal_huruf extends javax.swing.JFrame {
     }//GEN-LAST:event_zActionPerformed
 
     public void play_sound_huruf(char huruf) {
-        try {
-            Clip[] cliparrray = new Clip[2];
-            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            cliparrray[0] = clip;
-            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\benda" + huruf + ".wav"));
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            cliparrray[1] = clip;
-            cliparrray[0].start();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
-        }
         popup_huruf a = new popup_huruf(huruf);
         a.setVisible(true);
+    play b = new play();
+    b.setnama(huruf);
+        b.start();
+    }
+
+    class play extends Thread {
+        char huruf;
+        public void setnama(char huruf){
+        this.huruf=huruf;
+        }
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\suara_huruf\\" + huruf + ".mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+                stop();
+                System.out.println("aaaaa");
+            } catch (JavaLayerException e) {
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(bajuadat.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     /**

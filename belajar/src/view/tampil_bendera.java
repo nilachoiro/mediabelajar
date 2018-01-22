@@ -63,11 +63,13 @@ public class tampil_bendera extends javax.swing.JFrame implements Runnable{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        panelutama.setBorder(null);
         panelutama.setOpaque(false);
+        getContentPane().add(panelutama, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 114, 570, 390));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
-        jButton1.setActionCommand("");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setFocusPainted(false);
@@ -77,6 +79,7 @@ public class tampil_bendera extends javax.swing.JFrame implements Runnable{
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 205, -1, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonPrev1.png"))); // NOI18N
         jButton2.setBorderPainted(false);
@@ -88,6 +91,7 @@ public class tampil_bendera extends javax.swing.JFrame implements Runnable{
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 206, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -99,61 +103,14 @@ public class tampil_bendera extends javax.swing.JFrame implements Runnable{
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 667, 123, 114));
 
         box_nama.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         box_nama.setText("nama nya");
+        getContentPane().add(box_nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 579, 510, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgbendera.png"))); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(123, 123, 123)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(panelutama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(112, 112, 112)
-                                .addComponent(jButton1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 265, Short.MAX_VALUE)))))
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(panelutama, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(box_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(143, 143, 143))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(206, 206, 206)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 781, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 11, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 781));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,6 +139,7 @@ public void setpanel(String directory) {
         panelArray = new JPanel[totalbendera];
         for (int i = 0; i < totalbendera; i++) {
             panelArray[i] = new JPanel(new CardLayout());
+            panelArray[i].setOpaque(false);
         }
         panelutama.setLayout(new CardLayout());
         for (int i = 0; i < totalbendera; i++) {
@@ -226,30 +184,27 @@ public void setpanel(String directory) {
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
     public void Musik_Play() {
-//        try {
-//            audioIn = AudioSystem.getAudioInputStream(new File(lokasi + "/" + (set + 1) + ".wav"));
-//            clip = AudioSystem.getClip();
-//            clip.open(audioIn);
-//            clip.loop(0);
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
-//        }
- try {
-			FileInputStream fileInputStream = new FileInputStream(lokasi + "/" + (set + 1) + ".mp3");
-			Player player = new Player(fileInputStream);
-			System.out.println("Song is playing...");
-			player.play();
-		}catch (JavaLayerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (FileNotFoundException ex) {
-            Logger.getLogger(tampil_bendera.class.getName()).log(Level.SEVERE, null, ex);
-        }
- 
-        // TODO Auto-generated catch block
-        
+     play a = new play();
+        a.start();
     }
 
+    class play extends Thread {
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream(lokasi + "/" + (set + 1) + ".mp3");
+                Player player = new Player(fileInputStream);
+                System.out.println("Song is playing...");
+                Thread.sleep(1200);
+                player.play();
+                stop();
+                System.out.println("aaaaa");
+            } catch (FileNotFoundException e) {
+            } catch (JavaLayerException e) {
+            } catch (InterruptedException ex) {
+                Logger.getLogger(tampil_bendera.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */
