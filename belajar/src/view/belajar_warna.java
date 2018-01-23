@@ -84,6 +84,7 @@ public class belajar_warna extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelutama.setBorder(null);
@@ -248,7 +249,7 @@ public class belajar_warna extends javax.swing.JFrame {
         getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 600, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgbelajarwarna.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -265,7 +266,7 @@ public class belajar_warna extends javax.swing.JFrame {
     }//GEN-LAST:event_beforeActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        negara_bendera a = new negara_bendera();
+        pilih_warna a = new pilih_warna();
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

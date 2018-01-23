@@ -442,17 +442,17 @@ public class belajar_membaca extends javax.swing.JFrame {
         });
         getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 590, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setFocusPainted(false);
-        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome2.png"))); // NOI18N
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, 120, 140));
 
         panelkata.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
         panelkata.setForeground(new java.awt.Color(255, 255, 255));
@@ -460,10 +460,11 @@ public class belajar_membaca extends javax.swing.JFrame {
         panelkata.setText("abcd");
         getContentPane().add(panelkata, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 610, 70));
 
-        play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound.png"))); // NOI18N
+        play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound1.png"))); // NOI18N
         play.setBorderPainted(false);
         play.setContentAreaFilled(false);
-        play.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound1.png"))); // NOI18N
+        play.setFocusPainted(false);
+        play.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound2.png"))); // NOI18N
         play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playActionPerformed(evt);
@@ -475,7 +476,7 @@ public class belajar_membaca extends javax.swing.JFrame {
         reset.setBorderPainted(false);
         reset.setContentAreaFilled(false);
         reset.setFocusPainted(false);
-        reset.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete1.png"))); // NOI18N
+        reset.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete2.png"))); // NOI18N
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetActionPerformed(evt);
@@ -504,7 +505,7 @@ public class belajar_membaca extends javax.swing.JFrame {
     }//GEN-LAST:event_btnnextActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        mainmenu a = new mainmenu();
+       pilih_huruf a = new pilih_huruf();
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

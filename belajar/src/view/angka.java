@@ -6,11 +6,17 @@
 package view;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -127,7 +133,7 @@ public class angka extends javax.swing.JFrame {
                 btnnextActionPerformed(evt);
             }
         });
-        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 590, -1, -1));
+        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 600, -1, -1));
 
         grouphuruf.setBorder(null);
         grouphuruf.setOpaque(false);
@@ -270,7 +276,7 @@ public class angka extends javax.swing.JFrame {
                 c10ActionPerformed(evt);
             }
         });
-        group2.add(c10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 200, 220));
+        group2.add(c10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -10, 200, 220));
 
         c11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c11.png"))); // NOI18N
         c11.setBorderPainted(false);
@@ -522,7 +528,7 @@ public class angka extends javax.swing.JFrame {
         show.setOpaque(false);
         grouphuruf.add(show, "card4");
 
-        getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1000, 580));
+        getContentPane().add(grouphuruf, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1000, 630));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rumputlaut1.gif"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -726,15 +732,41 @@ public class angka extends javax.swing.JFrame {
      a.seticon(angka);
      a.setVisible(true);
      
-        try {
-            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_angka\\" + angka + ".wav"));
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.loop(0);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+//        try {
+//            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_angka\\" + angka + ".wav"));
+//            clip = AudioSystem.getClip();
+//            clip.open(audioIn);
+//            clip.loop(0);
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+//        }
+   play b = new play();
+        b.setnama(angka);
+        b.start();
+    }
+
+    class play extends Thread {
+
+        String angka;
+
+        public void setnama(String angka) {
+            this.angka = angka;
+        }
+
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\suara_angka\\" + angka + ".mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+                stop();
+                System.out.println("aaaaa");
+            } catch (JavaLayerException e) {
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(bajuadat.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
+
 
     /**
      * @param args the command line arguments

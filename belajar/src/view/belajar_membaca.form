@@ -686,13 +686,13 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/ButtonHome1.png"/>
+          <Image iconType="3" name="/image/b_back.png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/ButtonHome2.png"/>
+          <Image iconType="3" name="/image/b_back2.png"/>
         </Property>
       </Properties>
       <Events>
@@ -700,7 +700,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="20" y="650" width="100" height="-1"/>
+          <AbsoluteConstraints x="20" y="630" width="120" height="140"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -724,12 +724,13 @@
     <Component class="javax.swing.JButton" name="play">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/sound.png"/>
+          <Image iconType="3" name="/image/sound1.png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/sound1.png"/>
+          <Image iconType="3" name="/image/sound2.png"/>
         </Property>
       </Properties>
       <Events>
@@ -750,7 +751,7 @@
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="focusPainted" type="boolean" value="false"/>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/delete1.png"/>
+          <Image iconType="3" name="/image/delete2.png"/>
         </Property>
       </Properties>
       <Events>
