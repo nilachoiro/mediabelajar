@@ -6,10 +6,16 @@
 package view;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -454,16 +460,22 @@ public class belajar_membaca extends javax.swing.JFrame {
         panelkata.setText("abcd");
         getContentPane().add(panelkata, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 610, 70));
 
-        play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound1.png"))); // NOI18N
+        play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound.png"))); // NOI18N
         play.setBorderPainted(false);
         play.setContentAreaFilled(false);
+        play.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sound1.png"))); // NOI18N
         play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playActionPerformed(evt);
             }
         });
-        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 40, 100, 100));
+        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 20, 120, 110));
 
+        reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete.png"))); // NOI18N
+        reset.setBorderPainted(false);
+        reset.setContentAreaFilled(false);
+        reset.setFocusPainted(false);
+        reset.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete1.png"))); // NOI18N
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetActionPerformed(evt);
@@ -669,13 +681,35 @@ public class belajar_membaca extends javax.swing.JFrame {
     }
 
     public void play_sound_huruf(char huruf) {
-        try {
-            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.loop(0);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+//        try {
+//            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\" + huruf + ".wav"));
+//            clip = AudioSystem.getClip();
+//            clip.open(audioIn);
+//            clip.loop(0);
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+//        }
+    play a = new play();
+    a.setnama(huruf);
+        a.start();
+    }
+
+    class play extends Thread {
+        char huruf;
+        public void setnama(char hururf){
+        this.huruf=hururf;
+        }
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\suara_huruf\\" + huruf + ".mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+                stop();
+                System.out.println("aaaaa");
+            } catch (JavaLayerException e) {
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(bajuadat.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 

@@ -139,9 +139,10 @@ public class bajuadat extends javax.swing.JFrame {
         grouptitle.setOpaque(false);
         getContentPane().add(grouptitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 537, 57));
 
-        no.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        no.setFont(new java.awt.Font("Iskoola Pota", 1, 90)); // NOI18N
+        no.setForeground(new java.awt.Color(255, 255, 255));
         no.setText("1");
-        getContentPane().add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 100));
+        getContentPane().add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 150, 100));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroung baju.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
@@ -150,6 +151,7 @@ public class bajuadat extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
+        btnbefore.setEnabled(false);
         set--;
         if (set==-1) {
             set=32;
@@ -163,6 +165,7 @@ public class bajuadat extends javax.swing.JFrame {
     }//GEN-LAST:event_btnbeforeActionPerformed
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
+btnnext.setEnabled(false);
         set++;
         if (set==33) {
             set=0;
@@ -194,6 +197,8 @@ play a = new play();
                 System.out.println("Song is playing...");
                 Thread.sleep(1200);
                 player.play();
+                btnbefore.setEnabled(true);
+                btnnext.setEnabled(true);
                 stop();
                 System.out.println("aaaaa");
             } catch (JavaLayerException e) {

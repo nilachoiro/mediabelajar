@@ -7,6 +7,8 @@ package view;
 
 import java.awt.Color;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -17,6 +19,8 @@ import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -53,14 +57,31 @@ public class popup_huruf extends javax.swing.JFrame {
     }
 
     public void play_sound_huruf(char huruf) {
-        try {
 
-            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_huruf\\benda" + huruf + ".wav"));
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.start();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+play b = new play();
+        b.setnama(huruf);
+        b.start();
+    }
+
+    class play extends Thread {
+
+        char huruf;
+
+        public void setnama(char huruf) {
+            this.huruf = huruf;
+        }
+
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\suara_huruf\\benda" + huruf + ".mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+                stop();
+                System.out.println("aaaaa");
+            } catch (JavaLayerException e) {
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(bajuadat.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
@@ -78,8 +99,6 @@ public class popup_huruf extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/1.png"))); // NOI18N
         getContentPane().add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 530));
 
         pack();

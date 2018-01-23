@@ -607,16 +607,20 @@ public class mengenal_huruf extends javax.swing.JFrame {
     public void play_sound_huruf(char huruf) {
         popup_huruf a = new popup_huruf(huruf);
         a.setVisible(true);
-    play b = new play();
-    b.setnama(huruf);
+        
+        play b = new play();
+        b.setnama(huruf);
         b.start();
     }
 
     class play extends Thread {
+
         char huruf;
-        public void setnama(char huruf){
-        this.huruf=huruf;
+
+        public void setnama(char huruf) {
+            this.huruf = huruf;
         }
+
         public void run() {
             try {
                 FileInputStream fileInputStream = new FileInputStream("aset\\suara_huruf\\" + huruf + ".mp3");

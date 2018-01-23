@@ -153,6 +153,7 @@ public void setpanel(String directory) {
         panelArray[0].setVisible(true);
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jButton1.setEnabled(false);
         set++;
         int total = namanegara.length;
         System.out.println("total" + namanegara.length);
@@ -166,6 +167,7 @@ public void setpanel(String directory) {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+jButton2.setEnabled(false);
         set--;
         int total = namanegara.length - 1;
         System.out.println("total" + namanegara.length);
@@ -196,6 +198,8 @@ public void setpanel(String directory) {
                 System.out.println("Song is playing...");
                 Thread.sleep(1200);
                 player.play();
+                jButton1.setEnabled(true);
+                jButton2.setEnabled(true);
                 stop();
                 System.out.println("aaaaa");
             } catch (FileNotFoundException e) {
