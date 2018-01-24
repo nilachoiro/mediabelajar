@@ -61,7 +61,7 @@ public class bermainwarna extends javax.swing.JFrame {
         seticonpilih(pil2, daftarsoal[15]);
         seticonpilih(pil3, daftarsoal[23]);
         seticonpilih(pil4, daftarsoal[33]);
-        seticonpilih(pil5, daftarsoal[42]);
+        seticonpilih(pil5, daftarsoal[44]);
         seticonpilih(pil6, daftarsoal[23]);
         for (int i = 0; i < daftarsoal.length; i++) {
             System.out.println("daftar " + i + " = " + daftarsoal[i]);
@@ -300,6 +300,7 @@ public class bermainwarna extends javax.swing.JFrame {
     public void random() {
         Random rand = new Random();
         int getrandomsoal = rand.nextInt(49);
+        System.out.println("random soal : "+getrandomsoal);
         int[] getrandom = getRandom(getrandomsoal);
         benar = daftarsoal[getrandomsoal].charAt(0)+"";
         set++;
@@ -372,7 +373,6 @@ public class bermainwarna extends javax.swing.JFrame {
         }
         for (int j = 0; j < Nilai_Random.size(); j++) {
             a[j] = Nilai_Random.get(j).intValue();
-            System.out.println(" salah = " + a[j]);
         }
         System.out.println("====================");
         int indexke = randomnya.nextInt(3);
