@@ -128,7 +128,7 @@ public class bermainwarna extends javax.swing.JFrame {
 
         panelbalon1.setOpaque(false);
         panelbalon1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelbalon1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 220, 190));
+        panelbalon1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 267, 271));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/balon abu.png"))); // NOI18N
         panelbalon1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 5, -1, -1));
@@ -137,7 +137,7 @@ public class bermainwarna extends javax.swing.JFrame {
 
         panelbalon2.setOpaque(false);
         panelbalon2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelbalon2.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 220, 190));
+        panelbalon2.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 267, 271));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/balon abu.png"))); // NOI18N
         panelbalon2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 5, -1, -1));
