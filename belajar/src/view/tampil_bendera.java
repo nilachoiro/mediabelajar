@@ -37,7 +37,6 @@ public class tampil_bendera extends javax.swing.JFrame implements Runnable{
     AudioInputStream audioIn;
     Clip clip;
     String lokasi;
-
     public tampil_bendera(String directory) {
         initComponents();
         setpanel(directory);

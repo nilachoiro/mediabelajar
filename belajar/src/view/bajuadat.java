@@ -36,6 +36,7 @@ public class bajuadat extends javax.swing.JFrame {
     int set = 0;
     AudioInputStream audioIn;
     Clip clip;
+playsound play = new playsound();
     public bajuadat() {
         initComponents();
         this.setLocationRelativeTo(this);
@@ -85,6 +86,7 @@ public class bajuadat extends javax.swing.JFrame {
         grouprumah = new diu.swe.habib.JPanelSlider.JPanelSlider();
         grouptitle = new diu.swe.habib.JPanelSlider.JPanelSlider();
         no = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -144,6 +146,14 @@ public class bajuadat extends javax.swing.JFrame {
         no.setText("1");
         getContentPane().add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 150, 100));
 
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(873, 660, 130, 100));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroung baju.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
@@ -183,6 +193,10 @@ btnnext.setEnabled(false);
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        play.play("aset\\lagu\\lagu"+(set+1)+".ogg");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 public void Musik_Play() {
 play a = new play();
@@ -251,6 +265,7 @@ play a = new play();
     private diu.swe.habib.JPanelSlider.JPanelSlider grouprumah;
     private diu.swe.habib.JPanelSlider.JPanelSlider grouptitle;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel no;
     // End of variables declaration//GEN-END:variables
