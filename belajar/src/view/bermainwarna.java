@@ -6,11 +6,15 @@
 package view;
 
 import java.awt.CardLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -38,12 +42,15 @@ public class bermainwarna extends javax.swing.JFrame {
     JPanel setjpanelpilih;
     String benar;
     String[] pilihan = new String[3];
-    int poin=0;
+    int poin = 0;
+    int counter = 0;
+    boolean isIt = true;
 
     public bermainwarna() {
         this.setjpanel = panelbalon2;
         this.setjpanelpilih = truk1;
         initComponents();
+        start();
         setpanel();
     }
 
@@ -52,7 +59,6 @@ public class bermainwarna extends javax.swing.JFrame {
         String[] files;
         files = dir.list();
         daftarsoal = files;
-
         random();
         seticonsoal(label1, daftarsoal[19]);
         seticonsoal(label2, daftarsoal[39]);
@@ -69,6 +75,25 @@ public class bermainwarna extends javax.swing.JFrame {
         System.out.println("daftar soal " + daftarsoal.length);
     }
 
+    public void start() {
+        Timer timer = new Timer(); //new timer
+        counter = 60; //setting the counter to 10 sec
+        TimerTask task = new TimerTask() {
+            public void run() {
+                waktu.setText(Integer.toString(counter)); //the timer lable to counter.
+                counter--;
+                if (counter == -1) {
+                    timer.cancel();
+                } else if (isIt) {
+                    timer.cancel();
+                    isIt = false;
+                }
+            }
+        };
+        timer.scheduleAtFixedRate(task, 1000, 1000); // =  timer.scheduleAtFixedRate(task, delay, period);
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -78,12 +103,13 @@ public class bermainwarna extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
         boxpoin = new javax.swing.JLabel();
         balon = new diu.swe.habib.JPanelSlider.JPanelSlider();
         panelbalon1 = new javax.swing.JPanel();
         label1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        waktu = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         panelbalon2 = new javax.swing.JPanel();
         label2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -103,19 +129,8 @@ public class bermainwarna extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setFocusPainted(false);
-        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 130, 140));
 
         boxpoin.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         boxpoin.setForeground(new java.awt.Color(255, 255, 0));
@@ -132,6 +147,23 @@ public class bermainwarna extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/balon abu.png"))); // NOI18N
         panelbalon1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 5, -1, -1));
+
+        waktu.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        waktu.setForeground(new java.awt.Color(255, 0, 0));
+        waktu.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(0, 0, 0)));
+        panelbalon1.add(waktu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 110, 110));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setFocusPainted(false);
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        panelbalon1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 30, 130, 140));
 
         balon.add(panelbalon1, "card3");
 
@@ -164,6 +196,9 @@ public class bermainwarna extends javax.swing.JFrame {
         truk1.setOpaque(false);
         truk1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        pil3.setBorderPainted(false);
+        pil3.setContentAreaFilled(false);
+        pil3.setFocusPainted(false);
         pil3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pil3ActionPerformed(evt);
@@ -171,6 +206,9 @@ public class bermainwarna extends javax.swing.JFrame {
         });
         truk1.add(pil3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 190, 220));
 
+        pil1.setBorderPainted(false);
+        pil1.setContentAreaFilled(false);
+        pil1.setFocusPainted(false);
         pil1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pil1ActionPerformed(evt);
@@ -178,6 +216,9 @@ public class bermainwarna extends javax.swing.JFrame {
         });
         truk1.add(pil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 190, 220));
 
+        pil2.setBorderPainted(false);
+        pil2.setContentAreaFilled(false);
+        pil2.setFocusPainted(false);
         pil2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pil2ActionPerformed(evt);
@@ -193,6 +234,9 @@ public class bermainwarna extends javax.swing.JFrame {
         truk2.setOpaque(false);
         truk2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        pil4.setBorderPainted(false);
+        pil4.setContentAreaFilled(false);
+        pil4.setFocusPainted(false);
         pil4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pil4ActionPerformed(evt);
@@ -200,6 +244,9 @@ public class bermainwarna extends javax.swing.JFrame {
         });
         truk2.add(pil4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 190, 220));
 
+        pil5.setBorderPainted(false);
+        pil5.setContentAreaFilled(false);
+        pil5.setFocusPainted(false);
         pil5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pil5ActionPerformed(evt);
@@ -207,6 +254,9 @@ public class bermainwarna extends javax.swing.JFrame {
         });
         truk2.add(pil5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 190, 220));
 
+        pil6.setBorderPainted(false);
+        pil6.setContentAreaFilled(false);
+        pil6.setFocusPainted(false);
         pil6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pil6ActionPerformed(evt);
@@ -233,63 +283,75 @@ public class bermainwarna extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void pil1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil1ActionPerformed
+        popup_benarsalah popup = new popup_benarsalah();
         if (benar.equalsIgnoreCase(pilihan[0])) {
-            poin+=5;
-            boxpoin.setText(poin+"");
+            poin += 5;
+            boxpoin.setText(poin + "");
+            popup.seticonbenar();
+        } else {
+            popup.seticonsalah();
         }
-        else{
-            JOptionPane.showMessageDialog(this, "salah");
-        }
+        random();
     }//GEN-LAST:event_pil1ActionPerformed
 
     private void pil2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil2ActionPerformed
+        popup_benarsalah popup = new popup_benarsalah();
         if (benar.equalsIgnoreCase(pilihan[1])) {
-            poin+=5;
-            boxpoin.setText(poin+"");
+            poin += 5;
+            boxpoin.setText(poin + "");
+            popup.seticonbenar();
+        } else {
+            popup.seticonsalah();
         }
-        else{
-            JOptionPane.showMessageDialog(this, "salah");
-        }
+        random();
     }//GEN-LAST:event_pil2ActionPerformed
 
     private void pil3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil3ActionPerformed
-       if (benar.equalsIgnoreCase(pilihan[2])) {
-            poin+=5;
-            boxpoin.setText(poin+"");
+        popup_benarsalah popup = new popup_benarsalah();
+        if (benar.equalsIgnoreCase(pilihan[2])) {
+            poin += 5;
+            boxpoin.setText(poin + "");
+            popup.seticonbenar();
+        } else {
+            popup.seticonsalah();
         }
-        else{
-            JOptionPane.showMessageDialog(this, "salah");
-        }
+        random();
     }//GEN-LAST:event_pil3ActionPerformed
 
     private void pil6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil6ActionPerformed
+        popup_benarsalah popup = new popup_benarsalah();
         if (benar.equalsIgnoreCase(pilihan[2])) {
-            poin+=5;
-            boxpoin.setText(poin+"");
+            poin += 5;
+            boxpoin.setText(poin + "");
+            popup.seticonbenar();
+        } else {
+            popup.seticonsalah();
         }
-        else{
-            JOptionPane.showMessageDialog(this, "salah");
-        }
+        random();
     }//GEN-LAST:event_pil6ActionPerformed
 
     private void pil5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil5ActionPerformed
+        popup_benarsalah popup = new popup_benarsalah();
         if (benar.equalsIgnoreCase(pilihan[1])) {
-            poin+=5;
-            boxpoin.setText(poin+"");
+            poin += 5;
+            boxpoin.setText(poin + "");
+            popup.seticonbenar();
+        } else {
+            popup.seticonsalah();
         }
-        else{
-            JOptionPane.showMessageDialog(this, "salah");
-        }
+        random();
     }//GEN-LAST:event_pil5ActionPerformed
 
     private void pil4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil4ActionPerformed
-       if (benar.equalsIgnoreCase(pilihan[0])) {
-            poin+=5;
-            boxpoin.setText(poin+"");
+        popup_benarsalah popup = new popup_benarsalah();
+        if (benar.equalsIgnoreCase(pilihan[0])) {
+            poin += 5;
+            boxpoin.setText(poin + "");
+            popup.seticonbenar();
+        } else {
+            popup.seticonsalah();
         }
-        else{
-            JOptionPane.showMessageDialog(this, "salah");
-        }
+        random();
     }//GEN-LAST:event_pil4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -300,9 +362,9 @@ public class bermainwarna extends javax.swing.JFrame {
     public void random() {
         Random rand = new Random();
         int getrandomsoal = rand.nextInt(49);
-        System.out.println("random soal : "+getrandomsoal);
+        System.out.println("random soal : " + getrandomsoal);
         int[] getrandom = getRandom(getrandomsoal);
-        benar = daftarsoal[getrandomsoal].charAt(0)+"";
+        benar = daftarsoal[getrandomsoal].charAt(0) + "";
         set++;
         int kecepatan = 35;
         if (set == 50) {
@@ -325,11 +387,11 @@ public class bermainwarna extends javax.swing.JFrame {
             setjpanel = panelbalon2;
             setjpanelpilih = truk2;
         }
-        
-        pilihan[0] = daftarsoal[getrandom[0]].charAt(0)+"";
-        pilihan[1] = daftarsoal[getrandom[1]].charAt(0)+"";
-        pilihan[2] = daftarsoal[getrandom[2]].charAt(0)+"";
-        
+
+        pilihan[0] = daftarsoal[getrandom[0]].charAt(0) + "";
+        pilihan[1] = daftarsoal[getrandom[1]].charAt(0) + "";
+        pilihan[2] = daftarsoal[getrandom[2]].charAt(0) + "";
+
         balon.nextPanel(kecepatan, setjpanel, balon.left);
         truk.nextPanel(kecepatan, setjpanelpilih, balon.right);
         Musik_Play();
@@ -353,7 +415,9 @@ public class bermainwarna extends javax.swing.JFrame {
         Random randomnya = new Random();
         int dapatmax = kelipatanke * 5;
         int getbenar = (int) (Math.floor(Math.random() * (dapatmax - (dapatmax - 5) + 1)) + (dapatmax - 5));
-
+        if (getbenar == 50) {
+            getbenar = 49;
+        }
         while (Nilai_Random.size() < 3) {
             boolean sama = false;
             nilai = randomnya.nextInt(49);
@@ -472,5 +536,6 @@ public class bermainwarna extends javax.swing.JFrame {
     private diu.swe.habib.JPanelSlider.JPanelSlider truk;
     private javax.swing.JPanel truk1;
     private javax.swing.JPanel truk2;
+    private javax.swing.JLabel waktu;
     // End of variables declaration//GEN-END:variables
 }

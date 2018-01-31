@@ -30,7 +30,7 @@ public class angka extends javax.swing.JFrame {
     AudioInputStream audioIn;
     Clip clip;
     int set=0;
-    JPanel panelangka[]= new JPanel[3];
+    JPanel panelangka[]= new JPanel[5];
     
     public angka() {
         initComponents();
@@ -38,7 +38,8 @@ public class angka extends javax.swing.JFrame {
         panelangka[0]=group1;
         panelangka[1]=group2;
         panelangka[2]=group3;
-        
+        panelangka[3]=group4;
+        panelangka[4]=group5;
     }
 
     /**
@@ -50,7 +51,6 @@ public class angka extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        clGlossyPanel1 = new GlossyPanel.ClGlossyPanel();
         jButton1 = new javax.swing.JButton();
         btnbefore = new javax.swing.JButton();
         btnnext = new javax.swing.JButton();
@@ -89,6 +89,23 @@ public class angka extends javax.swing.JFrame {
         c28 = new javax.swing.JButton();
         c29 = new javax.swing.JButton();
         c30 = new javax.swing.JButton();
+        group4 = new javax.swing.JPanel();
+        c40 = new javax.swing.JButton();
+        c50 = new javax.swing.JButton();
+        c60 = new javax.swing.JButton();
+        c70 = new javax.swing.JButton();
+        c80 = new javax.swing.JButton();
+        c90 = new javax.swing.JButton();
+        c100 = new javax.swing.JButton();
+        group5 = new javax.swing.JPanel();
+        c200 = new javax.swing.JButton();
+        c300 = new javax.swing.JButton();
+        c400 = new javax.swing.JButton();
+        c500 = new javax.swing.JButton();
+        c600 = new javax.swing.JButton();
+        c700 = new javax.swing.JButton();
+        c800 = new javax.swing.JButton();
+        c900 = new javax.swing.JButton();
         show = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -525,6 +542,196 @@ public class angka extends javax.swing.JFrame {
 
         grouphuruf.add(group3, "card3");
 
+        group4.setOpaque(false);
+        group4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        c40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/40.png"))); // NOI18N
+        c40.setBorderPainted(false);
+        c40.setContentAreaFilled(false);
+        c40.setFocusPainted(false);
+        c40.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c20_hover.png"))); // NOI18N
+        c40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c40ActionPerformed(evt);
+            }
+        });
+        group4.add(c40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 200, 220));
+
+        c50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/50.png"))); // NOI18N
+        c50.setBorderPainted(false);
+        c50.setContentAreaFilled(false);
+        c50.setFocusPainted(false);
+        c50.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c21_hover.png"))); // NOI18N
+        c50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c50ActionPerformed(evt);
+            }
+        });
+        group4.add(c50, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, -10, 200, 220));
+
+        c60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/60.png"))); // NOI18N
+        c60.setBorderPainted(false);
+        c60.setContentAreaFilled(false);
+        c60.setFocusPainted(false);
+        c60.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c22_hover.png"))); // NOI18N
+        c60.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c60ActionPerformed(evt);
+            }
+        });
+        group4.add(c60, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 200, 220));
+
+        c70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/70.png"))); // NOI18N
+        c70.setBorderPainted(false);
+        c70.setContentAreaFilled(false);
+        c70.setFocusPainted(false);
+        c70.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c23_hover.png"))); // NOI18N
+        c70.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c70ActionPerformed(evt);
+            }
+        });
+        group4.add(c70, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, -10, 200, 250));
+
+        c80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/80.png"))); // NOI18N
+        c80.setBorderPainted(false);
+        c80.setContentAreaFilled(false);
+        c80.setFocusPainted(false);
+        c80.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c24_hover.png"))); // NOI18N
+        c80.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c80ActionPerformed(evt);
+            }
+        });
+        group4.add(c80, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 220, 240));
+
+        c90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/90.png"))); // NOI18N
+        c90.setBorderPainted(false);
+        c90.setContentAreaFilled(false);
+        c90.setFocusPainted(false);
+        c90.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c25_hover.png"))); // NOI18N
+        c90.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c90ActionPerformed(evt);
+            }
+        });
+        group4.add(c90, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 210, 210));
+
+        c100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/100.png"))); // NOI18N
+        c100.setBorderPainted(false);
+        c100.setContentAreaFilled(false);
+        c100.setFocusPainted(false);
+        c100.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c26_hover.png"))); // NOI18N
+        c100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c100ActionPerformed(evt);
+            }
+        });
+        group4.add(c100, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, 200, 250));
+
+        grouphuruf.add(group4, "card3");
+
+        group5.setOpaque(false);
+        group5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        c200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/200.png"))); // NOI18N
+        c200.setBorderPainted(false);
+        c200.setContentAreaFilled(false);
+        c200.setFocusPainted(false);
+        c200.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c20_hover.png"))); // NOI18N
+        c200.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c200ActionPerformed(evt);
+            }
+        });
+        group5.add(c200, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 200, 220));
+
+        c300.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/300.png"))); // NOI18N
+        c300.setBorderPainted(false);
+        c300.setContentAreaFilled(false);
+        c300.setFocusPainted(false);
+        c300.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c21_hover.png"))); // NOI18N
+        c300.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c300ActionPerformed(evt);
+            }
+        });
+        group5.add(c300, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 200, 220));
+
+        c400.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/400.png"))); // NOI18N
+        c400.setBorderPainted(false);
+        c400.setContentAreaFilled(false);
+        c400.setFocusPainted(false);
+        c400.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c22_hover.png"))); // NOI18N
+        c400.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c400ActionPerformed(evt);
+            }
+        });
+        group5.add(c400, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, -10, 200, 220));
+
+        c500.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/500.png"))); // NOI18N
+        c500.setBorderPainted(false);
+        c500.setContentAreaFilled(false);
+        c500.setFocusPainted(false);
+        c500.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c23_hover.png"))); // NOI18N
+        c500.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c500ActionPerformed(evt);
+            }
+        });
+        group5.add(c500, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 200, 250));
+
+        c600.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/600.png"))); // NOI18N
+        c600.setBorderPainted(false);
+        c600.setContentAreaFilled(false);
+        c600.setFocusPainted(false);
+        c600.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c24_hover.png"))); // NOI18N
+        c600.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c600ActionPerformed(evt);
+            }
+        });
+        group5.add(c600, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 220, 240));
+
+        c700.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/700.png"))); // NOI18N
+        c700.setBorderPainted(false);
+        c700.setContentAreaFilled(false);
+        c700.setFocusPainted(false);
+        c700.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c25_hover.png"))); // NOI18N
+        c700.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c700ActionPerformed(evt);
+            }
+        });
+        group5.add(c700, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 210, 210));
+
+        c800.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/800.png"))); // NOI18N
+        c800.setBorderPainted(false);
+        c800.setContentAreaFilled(false);
+        c800.setFocusPainted(false);
+        c800.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c26_hover.png"))); // NOI18N
+        c800.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c800ActionPerformed(evt);
+            }
+        });
+        group5.add(c800, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 200, 250));
+
+        c900.setIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/900.png"))); // NOI18N
+        c900.setBorderPainted(false);
+        c900.setContentAreaFilled(false);
+        c900.setFocusPainted(false);
+        c900.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/angka/c27_hover.png"))); // NOI18N
+        c900.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c900ActionPerformed(evt);
+            }
+        });
+        group5.add(c900, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, 200, 200));
+
+        grouphuruf.add(group5, "card3");
+
         show.setOpaque(false);
         grouphuruf.add(show, "card4");
 
@@ -711,7 +918,7 @@ public class angka extends javax.swing.JFrame {
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
         set++;
-        if (set==3) {
+        if (set==5) {
             set=0;
         }
         grouphuruf.nextPanel(25, panelangka[set], grouphuruf.left);
@@ -721,25 +928,91 @@ public class angka extends javax.swing.JFrame {
     private void btnbeforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbeforeActionPerformed
         set--;
         if (set==-1) {
-            set=2;
+            set=4;
         }
         grouphuruf.nextPanel(25, panelangka[set], grouphuruf.right);
         int urut=set+1;
     }//GEN-LAST:event_btnbeforeActionPerformed
+
+    private void c40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c40ActionPerformed
+        String huruf = "40";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c40ActionPerformed
+
+    private void c50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c50ActionPerformed
+        String huruf = "50";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c50ActionPerformed
+
+    private void c60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c60ActionPerformed
+        String huruf = "60";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c60ActionPerformed
+
+    private void c70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c70ActionPerformed
+        String huruf = "70";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c70ActionPerformed
+
+    private void c80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c80ActionPerformed
+        String huruf = "80";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c80ActionPerformed
+
+    private void c90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c90ActionPerformed
+        String huruf = "90";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c90ActionPerformed
+
+    private void c100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c100ActionPerformed
+        String huruf = "100";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c100ActionPerformed
+
+    private void c200ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c200ActionPerformed
+        String huruf = "200";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c200ActionPerformed
+
+    private void c300ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c300ActionPerformed
+       String huruf = "300";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c300ActionPerformed
+
+    private void c400ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c400ActionPerformed
+       String huruf = "400";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c400ActionPerformed
+
+    private void c500ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c500ActionPerformed
+        String huruf = "500";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c500ActionPerformed
+
+    private void c600ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c600ActionPerformed
+        String huruf = "600";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c600ActionPerformed
+
+    private void c700ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c700ActionPerformed
+        String huruf = "700";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c700ActionPerformed
+
+    private void c800ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c800ActionPerformed
+        String huruf = "800";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c800ActionPerformed
+
+    private void c900ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c900ActionPerformed
+        String huruf = "900";
+        play_sound_angka(huruf);
+    }//GEN-LAST:event_c900ActionPerformed
  public void play_sound_angka(String angka) {
      popup_angka a = new popup_angka(angka);
      System.out.println("angka = "+angka);
      a.seticon(angka);
      a.setVisible(true);
-     
-//        try {
-//            audioIn = AudioSystem.getAudioInputStream(new File("aset\\suara_angka\\" + angka + ".wav"));
-//            clip = AudioSystem.getClip();
-//            clip.open(audioIn);
-//            clip.loop(0);
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
-//        }
    play b = new play();
         b.setnama(angka);
         b.start();
@@ -810,6 +1083,7 @@ public class angka extends javax.swing.JFrame {
     private javax.swing.JButton c0;
     private javax.swing.JButton c1;
     private javax.swing.JButton c10;
+    private javax.swing.JButton c100;
     private javax.swing.JButton c11;
     private javax.swing.JButton c12;
     private javax.swing.JButton c13;
@@ -821,6 +1095,7 @@ public class angka extends javax.swing.JFrame {
     private javax.swing.JButton c19;
     private javax.swing.JButton c2;
     private javax.swing.JButton c20;
+    private javax.swing.JButton c200;
     private javax.swing.JButton c21;
     private javax.swing.JButton c22;
     private javax.swing.JButton c23;
@@ -832,16 +1107,30 @@ public class angka extends javax.swing.JFrame {
     private javax.swing.JButton c29;
     private javax.swing.JButton c3;
     private javax.swing.JButton c30;
+    private javax.swing.JButton c300;
     private javax.swing.JButton c4;
+    private javax.swing.JButton c40;
+    private javax.swing.JButton c400;
     private javax.swing.JButton c5;
+    private javax.swing.JButton c50;
+    private javax.swing.JButton c500;
     private javax.swing.JButton c6;
+    private javax.swing.JButton c60;
+    private javax.swing.JButton c600;
     private javax.swing.JButton c7;
+    private javax.swing.JButton c70;
+    private javax.swing.JButton c700;
     private javax.swing.JButton c8;
+    private javax.swing.JButton c80;
+    private javax.swing.JButton c800;
     private javax.swing.JButton c9;
-    private GlossyPanel.ClGlossyPanel clGlossyPanel1;
+    private javax.swing.JButton c90;
+    private javax.swing.JButton c900;
     private javax.swing.JPanel group1;
     private javax.swing.JPanel group2;
     private javax.swing.JPanel group3;
+    private javax.swing.JPanel group4;
+    private javax.swing.JPanel group5;
     private diu.swe.habib.JPanelSlider.JPanelSlider grouphuruf;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

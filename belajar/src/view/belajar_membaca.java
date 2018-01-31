@@ -452,7 +452,7 @@ public class belajar_membaca extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, 120, 140));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, 130, 130));
 
         panelkata.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
         panelkata.setForeground(new java.awt.Color(255, 255, 255));
@@ -470,7 +470,7 @@ public class belajar_membaca extends javax.swing.JFrame {
                 playActionPerformed(evt);
             }
         });
-        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 20, 120, 110));
+        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 20, 90, 110));
 
         reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete.png"))); // NOI18N
         reset.setBorderPainted(false);
@@ -482,7 +482,7 @@ public class belajar_membaca extends javax.swing.JFrame {
                 resetActionPerformed(evt);
             }
         });
-        getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 100, 100));
+        getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 100, 100));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bghuruf.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));

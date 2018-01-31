@@ -222,7 +222,7 @@ public class belajar_warna extends javax.swing.JFrame {
                 beforeActionPerformed(evt);
             }
         });
-        getContentPane().add(before, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 600, -1, -1));
+        getContentPane().add(before, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -234,7 +234,7 @@ public class belajar_warna extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 123, 114));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 140, 130));
 
         next.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonNext1.png"))); // NOI18N
         next.setBorderPainted(false);
@@ -246,7 +246,7 @@ public class belajar_warna extends javax.swing.JFrame {
                 nextActionPerformed(evt);
             }
         });
-        getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 600, -1, -1));
+        getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 580, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgbelajarwarna.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, -1, -1));

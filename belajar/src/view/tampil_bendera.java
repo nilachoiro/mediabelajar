@@ -102,7 +102,7 @@ public class tampil_bendera extends javax.swing.JFrame implements Runnable{
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 667, 123, 114));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, 123, 114));
 
         box_nama.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         box_nama.setText("nama nya");

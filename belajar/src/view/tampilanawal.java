@@ -33,7 +33,7 @@ public class tampilanawal extends javax.swing.JFrame {
         setUndecorated(true);
         centerFrame();
         setresolusi(1024, 768);
-//        Musik_Play();
+        Musik_Play();
     }
   public void Musik_Play() {
         try {

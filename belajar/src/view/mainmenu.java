@@ -37,9 +37,9 @@ public class mainmenu extends javax.swing.JFrame {
         bendera = new javax.swing.JButton();
         baju = new javax.swing.JButton();
         angka = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         exit = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        tatasurya = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,9 +95,6 @@ public class mainmenu extends javax.swing.JFrame {
         });
         getContentPane().add(angka, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, 260, 260));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/panda.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 240, 240));
-
         exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_exit.png"))); // NOI18N
         exit.setBorderPainted(false);
         exit.setContentAreaFilled(false);
@@ -120,7 +117,15 @@ public class mainmenu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 270, 230));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 270, 230));
+
+        tatasurya.setText("tatasurya");
+        tatasurya.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tatasuryaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(tatasurya, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 220, 180));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background menu.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
@@ -161,6 +166,12 @@ public class mainmenu extends javax.swing.JFrame {
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tatasuryaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tatasuryaActionPerformed
+        tata_surya a = new tata_surya();
+       a.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_tatasuryaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,6 +216,6 @@ public class mainmenu extends javax.swing.JFrame {
     private javax.swing.JButton bendera;
     private javax.swing.JButton exit;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton tatasurya;
     // End of variables declaration//GEN-END:variables
 }
