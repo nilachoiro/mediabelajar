@@ -6,9 +6,19 @@
 package view;
 
 import java.awt.CardLayout;
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -19,21 +29,28 @@ public class tampil_planet extends javax.swing.JFrame {
     /**
      * Creates new form tampil_planet
      */
-    String[] planet = {"Merkurius", "Venus", "Bumi", "Bulan", "Mars", "Yupiter", "Saturnus", "Uranus", "Neptunus"};
-    JPanel[] planetbayang1 = new JPanel[9];
-    JPanel[] planetbayang2 = new JPanel[9];
-    JPanel[] planetfull = new JPanel[9];
+    String[] planet = {"Matahari", "Merkurius", "Venus", "Bumi", "Bulan", "Mars", "Yupiter", "Saturnus", "Uranus", "Neptunus"};
+    JPanel[] planetbayang1 = new JPanel[10];
+    JPanel[] planetbayang2 = new JPanel[10];
+    JPanel[] planetfull = new JPanel[10];
     int set;
 
     public tampil_planet(int setarray) {
         initComponents();
-        set=setarray;
+        set = setarray;
         setpanel();
         setplanet(set);
+    setcursor();
     }
-
+private void setcursor() {
+    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    Image cursorImage = toolkit.getImage("cursor.png");
+    Point cursorHotSpot = new Point(0,0);
+    Cursor customCursor = toolkit.createCustomCursor(cursorImage, cursorHotSpot, "Cursor");
+    this.setCursor(customCursor);
+    }
     public void setpanel() {
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             planetbayang1[i] = new JPanel(new CardLayout());
             planetbayang1[i].setOpaque(false);
             planetbayang2[i] = new JPanel(new CardLayout());
@@ -41,8 +58,7 @@ public class tampil_planet extends javax.swing.JFrame {
             planetfull[i] = new JPanel(new CardLayout());
             planetfull[i].setOpaque(false);
         }
-        panelutama.setLayout(new CardLayout());
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             ImageIcon image = new ImageIcon("aset\\tatasurya\\planet" + planet[i] + ".png");
             JLabel imagelabel = new JLabel(image);
             ImageIcon image2 = new ImageIcon("aset\\tatasurya\\planet" + planet[i] + "Lock.png");
@@ -53,7 +69,7 @@ public class tampil_planet extends javax.swing.JFrame {
             planetbayang2[i].add(imagelabel3);
             planetfull[i].add(imagelabel);
         }
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             panel1.add(planetbayang1[i]);
             panel3.add(planetbayang2[i]);
             panel2.add(planetfull[i]);
@@ -69,62 +85,62 @@ public class tampil_planet extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        previus = new javax.swing.JButton();
+        next = new javax.swing.JButton();
+        titel = new javax.swing.JLabel();
         panel1 = new diu.swe.habib.JPanelSlider.JPanelSlider();
         panel2 = new diu.swe.habib.JPanelSlider.JPanelSlider();
         panel3 = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        panelutama = new diu.swe.habib.JPanelSlider.JPanelSlider();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        previus.setBorderPainted(false);
+        previus.setContentAreaFilled(false);
+        previus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        previus.setFocusPainted(false);
+        previus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                previusActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 396, 260, 360));
+        getContentPane().add(previus, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 456, 260, 300));
 
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        next.setBorderPainted(false);
+        next.setContentAreaFilled(false);
+        next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        next.setFocusPainted(false);
+        next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                nextActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 400, 290, 360));
+        getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 460, 290, 300));
+
+        titel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tatasurya/tBulan.png"))); // NOI18N
+        getContentPane().add(titel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 1000, 330));
 
         panel1.setBorder(new javax.swing.border.MatteBorder(null));
         panel1.setOpaque(false);
-        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 360));
+        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 260, 300));
 
         panel2.setBorder(new javax.swing.border.MatteBorder(null));
         panel2.setOpaque(false);
-        getContentPane().add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 480, 360));
+        getContentPane().add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 480, 300));
 
         panel3.setBorder(new javax.swing.border.MatteBorder(null));
         panel3.setOpaque(false);
-        getContentPane().add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(741, 400, 280, 360));
-
-        panelutama.setBorder(null);
-        panelutama.setOpaque(false);
-        getContentPane().add(panelutama, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 570, 360));
+        getContentPane().add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(741, 460, 280, 300));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
         jButton3.setFocusPainted(false);
-        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back1.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -132,96 +148,144 @@ public class tampil_planet extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 140, 140));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tatasurya/nama.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 200));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bgtatasurya.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
+       previus.setEnabled(false);
+next.setEnabled(false);
         set++;
-        int total = 8;
+        int total = 9;
         if (set == -1) {
             set = total;
         }
-        if (set == 9) {
+        if (set == 10) {
             set = 0;
         }
         int setkiri = set - 1;
         int setkanan = set + 1;
         if (setkiri == -1) {
-            setkiri = 8;
+            setkiri = 9;
         }
-        if (setkiri == 9) {
+        if (setkiri == 10) {
             setkiri = 0;
         }
         if (setkanan == -1) {
-            setkanan = 8;
+            setkanan = 9;
         }
-        if (setkanan == 9) {
+        if (setkanan == 10) {
             setkanan = 0;
         }
         panel1.nextPanel(25, planetbayang1[setkiri], panel1.left);
         panel3.nextPanel(25, planetbayang2[setkanan], panel3.left);
         panel2.nextPanel(25, planetfull[set], panel2.left);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        sound(set);
+        seticon(planet[set]);
+    }//GEN-LAST:event_nextActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void previusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previusActionPerformed
+previus.setEnabled(false);
+next.setEnabled(false);
         set--;
-        int total = 8;
+        int total = 9;
         if (set == -1) {
             set = total;
         }
-        if (set == 9) {
+        if (set == 10) {
             set = 0;
         }
         int setkiri = set - 1;
         int setkanan = set + 1;
 
         if (setkiri == -1) {
-            setkiri = 8;
+            setkiri = 9;
         }
-        if (setkiri == 9) {
+        if (setkiri == 10) {
             setkiri = 0;
         }
         if (setkanan == -1) {
-            setkanan = 8;
+            setkanan = 9;
         }
-        if (setkanan == 9) {
+        if (setkanan == 10) {
             setkanan = 0;
         }
 
         panel1.nextPanel(25, planetbayang1[setkiri], panel1.right);
         panel3.nextPanel(25, planetbayang2[setkanan], panel3.right);
         panel2.nextPanel(25, planetfull[set], panel2.right);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        sound(set);
+        seticon(planet[set]);
+    }//GEN-LAST:event_previusActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        tata_surya a = new tata_surya();
-        a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-public void setplanet(int setarray){
+    public void setplanet(int setarray) {
         int setkiri = setarray - 1;
         int setkanan = setarray + 1;
 
         if (setkiri == -1) {
-            setkiri = 8;
+            setkiri = 9;
         }
-        if (setkiri == 9) {
+        if (setkiri == 10) {
             setkiri = 0;
         }
         if (setkanan == -1) {
-            setkanan = 8;
+            setkanan = 9;
         }
-        if (setkanan == 9) {
+        if (setkanan == 10) {
             setkanan = 0;
         }
 
         panel1.nextPanel(25, planetbayang1[setkiri], panel1.right);
         panel3.nextPanel(25, planetbayang2[setkanan], panel3.right);
         panel2.nextPanel(25, planetfull[setarray], panel2.right);
-}
+        sound(set);
+        seticon(planet[set]);
+    }
+
+    public void sound(int nama) {
+        play a = new play();
+        a.setnama(nama);
+        a.start();
+    }
+
+    class play extends Thread {
+
+        int nama;
+
+        public void setnama(int nama) {
+            this.nama = nama;
+        }
+
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\tatasurya\\" + (nama + 1) + ".mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+                Thread.sleep(1000);
+                next.setEnabled(true);
+                previus.setEnabled(true);
+                stop();
+            } catch (FileNotFoundException e) {
+            } catch (JavaLayerException ex) {
+                Logger.getLogger(tampil_planet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(tampil_planet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+    public void seticon(String nama) {
+        titel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tatasurya/t"+nama+".png")));
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -258,13 +322,14 @@ public void setplanet(int setarray){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton next;
     private diu.swe.habib.JPanelSlider.JPanelSlider panel1;
     private diu.swe.habib.JPanelSlider.JPanelSlider panel2;
     private diu.swe.habib.JPanelSlider.JPanelSlider panel3;
-    private diu.swe.habib.JPanelSlider.JPanelSlider panelutama;
+    private javax.swing.JButton previus;
+    private javax.swing.JLabel titel;
     // End of variables declaration//GEN-END:variables
 }

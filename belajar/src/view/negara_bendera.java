@@ -5,14 +5,14 @@
  */
 package view;
 
-import java.io.File;
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -25,11 +25,21 @@ public class negara_bendera extends javax.swing.JFrame {
     /**
      * Creates new form negara_bendera
      */
-    AudioInputStream audioIn;
-    Clip clip;
+
+    playbacksound a = new playbacksound();
+    
 
     public negara_bendera() {
         initComponents();
+        a.start();
+   setcursor();
+    }
+private void setcursor() {
+    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    Image cursorImage = toolkit.getImage("cursor.png");
+    Point cursorHotSpot = new Point(0,0);
+    Cursor customCursor = toolkit.createCustomCursor(cursorImage, cursorHotSpot, "Cursor");
+    this.setCursor(customCursor);
     }
 
     /**
@@ -57,6 +67,7 @@ public class negara_bendera extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         worlderopa = new javax.swing.JPanel();
+        back = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -69,6 +80,7 @@ public class negara_bendera extends javax.swing.JFrame {
         eropautara = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         worldafrika = new javax.swing.JPanel();
+        back1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -80,8 +92,8 @@ public class negara_bendera extends javax.swing.JFrame {
         afrikatengah = new javax.swing.JButton();
         afrikaselatan = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        worldaustralia = new javax.swing.JPanel();
         worldasia = new javax.swing.JPanel();
+        back2 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -94,6 +106,7 @@ public class negara_bendera extends javax.swing.JFrame {
         asiaselatan = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         worldamerika = new javax.swing.JPanel();
+        back3 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -104,7 +117,7 @@ public class negara_bendera extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelutama.setBorder(null);
@@ -233,6 +246,18 @@ public class negara_bendera extends javax.swing.JFrame {
         worlderopa.setOpaque(false);
         worlderopa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
+        back.setBorderPainted(false);
+        back.setContentAreaFilled(false);
+        back.setFocusPainted(false);
+        back.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        worlderopa.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(893, 0, 130, 130));
+
         jLabel4.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -326,6 +351,18 @@ public class negara_bendera extends javax.swing.JFrame {
 
         worldafrika.setOpaque(false);
         worldafrika.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        back1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
+        back1.setBorderPainted(false);
+        back1.setContentAreaFilled(false);
+        back1.setFocusPainted(false);
+        back1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
+        back1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back1ActionPerformed(evt);
+            }
+        });
+        worldafrika.add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(893, 0, 130, 130));
 
         jLabel9.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -425,12 +462,20 @@ public class negara_bendera extends javax.swing.JFrame {
 
         panelutama.add(worldafrika, "card3");
 
-        worldaustralia.setOpaque(false);
-        worldaustralia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelutama.add(worldaustralia, "card3");
-
         worldasia.setOpaque(false);
         worldasia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        back2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
+        back2.setBorderPainted(false);
+        back2.setContentAreaFilled(false);
+        back2.setFocusPainted(false);
+        back2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
+        back2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back2ActionPerformed(evt);
+            }
+        });
+        worldasia.add(back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(893, 0, 130, 130));
 
         jLabel14.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -530,6 +575,18 @@ public class negara_bendera extends javax.swing.JFrame {
 
         worldamerika.setOpaque(false);
         worldamerika.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        back3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back.png"))); // NOI18N
+        back3.setBorderPainted(false);
+        back3.setContentAreaFilled(false);
+        back3.setFocusPainted(false);
+        back3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b_back2.png"))); // NOI18N
+        back3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back3ActionPerformed(evt);
+            }
+        });
+        worldamerika.add(back3, new org.netbeans.lib.awtextra.AbsoluteConstraints(893, 0, 130, 130));
 
         jLabel20.setFont(new java.awt.Font("Leelawadee", 1, 48)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -741,7 +798,24 @@ public class negara_bendera extends javax.swing.JFrame {
         mainmenu a = new mainmenu();
         a.setVisible(true);
         this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+panelutama.nextPanel(20, world, panelutama.left);        
+    }//GEN-LAST:event_backActionPerformed
+
+    private void back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back1ActionPerformed
+  panelutama.nextPanel(20, world, panelutama.left);  
+    }//GEN-LAST:event_back1ActionPerformed
+
+    private void back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2ActionPerformed
+  panelutama.nextPanel(20, world, panelutama.left);  
+    }//GEN-LAST:event_back2ActionPerformed
+
+    private void back3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back3ActionPerformed
+       panelutama.nextPanel(20, world, panelutama.left);  
+    }//GEN-LAST:event_back3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -773,14 +847,28 @@ public class negara_bendera extends javax.swing.JFrame {
             }
         }
     }
+class playbacksound extends Thread {
 
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\lagu\\bendera.mp3");
+                Player player = new Player(fileInputStream);
+                System.out.println("Song is playing...");
+                player.play();
+                System.out.println("aaaaa");
+            } catch (JavaLayerException ex) {
+                Logger.getLogger(tampil_planet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(mainmenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
     public void setpanelafrika(String lokasi) {
         String directory = "aset\\bendera_jpg\\afrika\\" + lokasi;
 
         soundbagianbenua(lokasi);
         tampil_bendera a = new tampil_bendera(directory);
         a.setVisible(true);
-        this.dispose();
     }
 
     public void setpanelamerika(String lokasi) {
@@ -788,7 +876,6 @@ public class negara_bendera extends javax.swing.JFrame {
         tampil_bendera a = new tampil_bendera(directory);
         soundbagianbenua(lokasi);
         a.setVisible(true);
-        this.dispose();
     }
 
     public void setpanelasia(String lokasi) {
@@ -796,7 +883,6 @@ public class negara_bendera extends javax.swing.JFrame {
         tampil_bendera a = new tampil_bendera(directory);
         soundbagianbenua(lokasi);
         a.setVisible(true);
-        this.dispose();
     }
 
     public void setpaneleropa(String lokasi) {
@@ -804,7 +890,6 @@ public class negara_bendera extends javax.swing.JFrame {
         tampil_bendera a = new tampil_bendera(directory);
         soundbagianbenua(lokasi);
         a.setVisible(true);
-        this.dispose();
     }
 
     public void setpanelaustralia() {
@@ -812,7 +897,6 @@ public class negara_bendera extends javax.swing.JFrame {
         tampil_bendera a = new tampil_bendera(directory);
         soundbagianbenua("australia");
         a.setVisible(true);
-        this.dispose();
     }
 
     public static void main(String args[]) {
@@ -865,6 +949,10 @@ public class negara_bendera extends javax.swing.JFrame {
     private javax.swing.JButton asiatenggara;
     private javax.swing.JButton asiatimur;
     private javax.swing.JLabel australia;
+    private javax.swing.JButton back;
+    private javax.swing.JButton back1;
+    private javax.swing.JButton back2;
+    private javax.swing.JButton back3;
     private javax.swing.JButton btnafrika;
     private javax.swing.JButton btnamerika;
     private javax.swing.JButton btnasia;
@@ -905,7 +993,6 @@ public class negara_bendera extends javax.swing.JFrame {
     private javax.swing.JPanel worldafrika;
     private javax.swing.JPanel worldamerika;
     private javax.swing.JPanel worldasia;
-    private javax.swing.JPanel worldaustralia;
     private javax.swing.JPanel worlderopa;
     // End of variables declaration//GEN-END:variables
 }

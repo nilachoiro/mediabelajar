@@ -5,19 +5,38 @@
  */
 package view;
 
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
+
 /**
  *
  * @author acer
  */
 public class pilih_warna extends javax.swing.JFrame {
-
+play a = new play();
     /**
      * Creates new form pilih_warna
      */
     public pilih_warna() {
         initComponents();
+        a.start();
+   setcursor();
     }
-
+private void setcursor() {
+    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    Image cursorImage = toolkit.getImage("cursor.png");
+    Point cursorHotSpot = new Point(0,0);
+    Cursor customCursor = toolkit.createCustomCursor(cursorImage, cursorHotSpot, "Cursor");
+    this.setCursor(customCursor);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,6 +53,7 @@ public class pilih_warna extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ButtonHome1.png"))); // NOI18N
@@ -81,21 +101,33 @@ public class pilih_warna extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         belajar_warna a = new belajar_warna();
         a.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         bermainwarna a = new bermainwarna();
         a.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         mainmenu a = new mainmenu();
         a.setVisible(true);
         this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_jButton3ActionPerformed
+class play extends Thread {
 
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\lagu\\warna.mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+            } catch (JavaLayerException ex) {
+                Logger.getLogger(tampil_planet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(mainmenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */

@@ -5,11 +5,16 @@
  */
 package view;
 
-import java.awt.Dimension;
-import java.awt.DisplayMode;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
+import java.awt.Cursor;
+import java.awt.Image;
 import java.awt.Point;
+import java.awt.Toolkit;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -17,11 +22,21 @@ import java.awt.Point;
  */
 public class mainmenu extends javax.swing.JFrame {
 
+        play a = new play();
     /**
      * Creates new form mainmenu
      */
     public mainmenu() {
         initComponents();
+        a.start();
+    setcursor();
+    }
+private void setcursor() {
+    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    Image cursorImage = toolkit.getImage("cursor.png");
+    Point cursorHotSpot = new Point(0,0);
+    Cursor customCursor = toolkit.createCustomCursor(cursorImage, cursorHotSpot, "Cursor");
+    this.setCursor(customCursor);
     }
 
     /**
@@ -40,6 +55,8 @@ public class mainmenu extends javax.swing.JFrame {
         exit = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         tatasurya = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -117,15 +134,43 @@ public class mainmenu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 270, 230));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 270, 230));
 
-        tatasurya.setText("tatasurya");
+        tatasurya.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsigalaxy.png"))); // NOI18N
+        tatasurya.setBorderPainted(false);
+        tatasurya.setContentAreaFilled(false);
+        tatasurya.setFocusPainted(false);
+        tatasurya.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/opsigalaxy_HOVER.png"))); // NOI18N
         tatasurya.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tatasuryaActionPerformed(evt);
             }
         });
-        getContentPane().add(tatasurya, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 220, 180));
+        getContentPane().add(tatasurya, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, 220, 220));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/i2.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setFocusPainted(false);
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/i1.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/q1.png"))); // NOI18N
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setFocusPainted(false);
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/q2.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background menu.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
@@ -137,42 +182,72 @@ public class mainmenu extends javax.swing.JFrame {
         pilih_huruf a = new pilih_huruf();
         a.setVisible(true);
         this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_abcActionPerformed
 
     private void bajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bajuActionPerformed
        bajuadat b = new bajuadat();
        b.setVisible(true);
        this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_bajuActionPerformed
 
     private void angkaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkaActionPerformed
        angka c = new angka();
        c.setVisible(true);
        this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_angkaActionPerformed
 
     private void benderaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_benderaActionPerformed
         negara_bendera a = new negara_bendera();
         a.setVisible(true);
         this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_benderaActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         System.exit(0);
+        this.a.stop();
     }//GEN-LAST:event_exitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         pilih_warna a = new pilih_warna();
         a.setVisible(true);
         this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tatasuryaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tatasuryaActionPerformed
         tata_surya a = new tata_surya();
        a.setVisible(true);
        this.dispose();
+        this.a.stop();
     }//GEN-LAST:event_tatasuryaActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       bantuan a = new bantuan();
+       a.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        tentang a = new tentang();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+class play extends Thread {
+
+        public void run() {
+            try {
+                FileInputStream fileInputStream = new FileInputStream("aset\\lagu\\gameplay.mp3");
+                Player player = new Player(fileInputStream);
+                player.play();
+            } catch (JavaLayerException ex) {
+                Logger.getLogger(tampil_planet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(mainmenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -216,6 +291,8 @@ public class mainmenu extends javax.swing.JFrame {
     private javax.swing.JButton bendera;
     private javax.swing.JButton exit;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton tatasurya;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,10 +6,13 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  *
@@ -30,6 +33,15 @@ public class popup_angka extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         setBackground(new Color(0, 0, 0, 0));
         start();
+        setcursor();
+    }
+
+    private void setcursor() {
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image cursorImage = toolkit.getImage("cursor.png");
+        Point cursorHotSpot = new Point(0, 0);
+        Cursor customCursor = toolkit.createCustomCursor(cursorImage, cursorHotSpot, "Cursor");
+        this.setCursor(customCursor);
     }
 
     public void seticon(String angka) {
@@ -38,9 +50,7 @@ public class popup_angka extends javax.swing.JFrame {
     }
 
     public void start() {
-//        mainMusik(musikmain);
-        //sehari = 5 detik,perawatan = 15 detik
-        mytimer.schedule(cek, 1000, 1000);//detik asli
+        mytimer.schedule(cek, 1000, 1000);
     }
 
     /**
